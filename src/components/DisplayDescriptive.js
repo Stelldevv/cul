@@ -27,7 +27,7 @@ const DisplayDescriptive = () => {
           horizontal
           style={{ margin: "3em 0em", textTransform: "uppercase" }}
         >
-          <a href="#">Landscaping 101</a>
+          <a href="/">Landscaping 101</a>
         </Divider>
         <Header as="h3" style={{ fontSize: "2em" }}>
           Got wood?
