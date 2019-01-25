@@ -3,9 +3,9 @@ import { Router, Route, Switch } from "react-router-dom";
 import history from "../history";
 
 import ResponsiveContainer from "./ResponsiveContainer";
-import DisplayIntro from "./DisplayIntro";
-import DisplayReviews from "./DisplayReviews";
-import DisplayDescriptive from "./DisplayDescriptive";
+import DisplayIntro from "./Displays/DisplayIntro";
+import DisplayReviews from "./Displays/DisplayReviews";
+import DisplayDescriptive from "./Displays/DisplayDescriptive";
 import Footer from "./Footer.js";
 
 class App extends React.Component {

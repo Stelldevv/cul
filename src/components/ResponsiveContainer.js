@@ -13,8 +13,10 @@ import {
   Visibility
 } from "semantic-ui-react";
 
-import PageRouting from "./PageRouting";
-import PageRoutingMobile from "./PageRoutingMobile";
+import NavBarDrop from "./Widgets/NavBarDrop";
+import SideBarDrop from "./Widgets/SideBarDrop";
+import PageRouting from "./Routing/PageRouting";
+import PageRoutingMobile from "./Routing/PageRoutingMobile";
 
 const getWidth = () => {
   const isSSR = typeof window === "undefined";
@@ -57,12 +59,10 @@ class DesktopContainer extends Component {
               size="large"
             >
               <Container>
-                <Menu.Item active>
+                <Menu.Item>
                   <Link to="/">Home</Link>
                 </Menu.Item>
-                <Menu.Item>
-                  <Link to="/services">Work</Link>
-                </Menu.Item>
+                <NavBarDrop />
                 <Menu.Item>
                   <Link to="/about">About</Link>
                 </Menu.Item>
@@ -78,7 +78,7 @@ class DesktopContainer extends Component {
                         color: "white"
                       }}
                     >
-                      Quote Me!
+                      Free Estimate!
                     </Link>
                   </Button>
                 </Menu.Item>
@@ -128,11 +128,7 @@ class MobileContainer extends Component {
               Home
             </Link>
           </Menu.Item>
-          <Menu.Item>
-            <Link to="/services" onClick={this.handleSidebarHide}>
-              Work
-            </Link>
-          </Menu.Item>
+          <SideBarDrop handleSidebarHide={this.handleSidebarHide} />
           <Menu.Item>
             <Link to="/about" onClick={this.handleSidebarHide}>
               About

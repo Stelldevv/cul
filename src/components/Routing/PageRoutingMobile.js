@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import HomePageHeadingMobile from "./Headers/HomePageHeadingMobile";
-import PageHeadingMobile from "./Headers/PageHeadingMobile";
+import HomePageHeadingMobile from "../Headers/HomePageHeadingMobile";
+import PageHeadingMobile from "../Headers/PageHeadingMobile";
 
 const PageRoutingMobile = () =>
   <React.Fragment>

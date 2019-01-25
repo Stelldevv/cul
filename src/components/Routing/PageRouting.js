@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import HomePageHeading from "./Headers/HomePageHeading";
-import PageHeading from "./Headers/PageHeading";
+import HomePageHeading from "../Headers/HomePageHeading";
+import PageHeading from "../Headers/PageHeading";
 
 const PageRouting = () =>
   <React.Fragment>

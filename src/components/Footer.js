@@ -13,13 +13,13 @@ const Footer = () => {
               <List link inverted>
                 <List.Item>Business</List.Item>
                 <List.Item>
-                  <Link to="contact">Contact Us</Link>
+                  <Link to="/contact">Contact Us</Link>
                 </List.Item>
                 <List.Item>
-                  <Link to="gallery">Gallery</Link>
+                  <Link to="/gallery">Gallery</Link>
                 </List.Item>
                 <List.Item>
-                  <Link to="jobs">Jobs</Link>
+                  <Link to="/jobs">Jobs</Link>
                 </List.Item>
               </List>
             </Grid.Column>
