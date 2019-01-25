@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import {
   Button,
   Container,
-  Header,
   Icon,
   Menu,
   Responsive,
@@ -13,47 +13,13 @@ import {
   Visibility
 } from "semantic-ui-react";
 
+import PageRouting from "./PageRouting";
+import PageRoutingMobile from "./PageRoutingMobile";
+
 const getWidth = () => {
   const isSSR = typeof window === "undefined";
 
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth;
-};
-
-/* eslint-disable react/no-multi-comp */
-/* Heads up! PageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
-     * such things.
-     */
-const PageHeading = ({ mobile, headerText }) =>
-  <Container text>
-    <Header
-      as="h1"
-      content={headerText ? headerText : "[ERROR 404: PAGE NOT FOUND]"}
-      inverted
-      style={{
-        fontSize: mobile ? "2em" : "4em",
-        fontWeight: "normal",
-        marginBottom: 0,
-        marginTop: mobile ? "1.5em" : "3em"
-      }}
-    />
-    <Header
-      as="h2"
-      content="Cruzin' with excellence for over 10 years!"
-      inverted
-      style={{
-        fontSize: mobile ? "1.5em" : "1.7em",
-        fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em"
-      }}
-    />
-    <Button primary size="huge">
-      Get a Quote
-      <Icon name="right arrow" />
-    </Button>
-  </Container>;
-
-PageHeading.propTypes = {
-  mobile: PropTypes.bool
 };
 
 /* Heads up!
@@ -61,7 +27,7 @@ PageHeading.propTypes = {
      * It can be more complicated, but you can create really flexible markup.
      */
 class DesktopContainer extends Component {
-  state = { headerText: this.props.headerText };
+  state = {};
 
   hideFixedMenu = () => this.setState({ fixed: false });
   showFixedMenu = () => this.setState({ fixed: true });
@@ -80,7 +46,7 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" }}
+            style={{ maxHeight: 700, padding: "1em 0em" }}
             vertical
           >
             <Menu
@@ -91,24 +57,34 @@ class DesktopContainer extends Component {
               size="large"
             >
               <Container>
-                <Menu.Item as="a" active>
-                  Home
+                <Menu.Item active>
+                  <Link to="/">Home</Link>
                 </Menu.Item>
-                <Menu.Item as="a">Work</Menu.Item>
-                <Menu.Item as="a">About</Menu.Item>
+                <Menu.Item>
+                  <Link to="/services">Work</Link>
+                </Menu.Item>
+                <Menu.Item>
+                  <Link to="/about">About</Link>
+                </Menu.Item>
                 <Menu.Item position="right">
                   <Button
-                    as="a"
                     inverted={!fixed}
                     primary={fixed}
                     style={{ marginLeft: "0.5em" }}
                   >
-                    Quote Me!
+                    <Link
+                      to="/estimate"
+                      style={{
+                        color: "white"
+                      }}
+                    >
+                      Quote Me!
+                    </Link>
                   </Button>
                 </Menu.Item>
               </Container>
             </Menu>
-            <PageHeading headerText={this.state.headerText} />
+            <PageRouting />
           </Segment>
         </Visibility>
 
@@ -123,7 +99,7 @@ DesktopContainer.propTypes = {
 };
 
 class MobileContainer extends Component {
-  state = { headerText: this.props.headerText };
+  state = {};
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
 
@@ -147,19 +123,33 @@ class MobileContainer extends Component {
           vertical
           visible={sidebarOpened}
         >
-          <Menu.Item as="a" active>
-            Home
+          <Menu.Item active>
+            <Link to="/" onClick={this.handleSidebarHide}>
+              Home
+            </Link>
           </Menu.Item>
-          <Menu.Item as="a">Work</Menu.Item>
-          <Menu.Item as="a">About</Menu.Item>
-          <Menu.Item as="a">Quote Me!</Menu.Item>
+          <Menu.Item>
+            <Link to="/services" onClick={this.handleSidebarHide}>
+              Work
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to="/about" onClick={this.handleSidebarHide}>
+              About
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to="/estimate" onClick={this.handleSidebarHide}>
+              Quote Me!
+            </Link>
+          </Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 350, padding: "1em 0em" }}
+            style={{ maxHeight: 350, padding: "1em 0em" }}
             vertical
           >
             <Container>
@@ -168,15 +158,21 @@ class MobileContainer extends Component {
                   <Icon name="sidebar" />
                 </Menu.Item>
                 <Menu.Item position="right">
-                  <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                    Quote Me!
+                  <Button inverted style={{ marginLeft: "0.5em" }}>
+                    <Link
+                      to="/estimate"
+                      style={{
+                        color: "white"
+                      }}
+                    >
+                      Quote Me!
+                    </Link>
                   </Button>
                 </Menu.Item>
               </Menu>
             </Container>
-            <PageHeading mobile headerText={this.state.headerText} />
+            <PageRoutingMobile />
           </Segment>
-
           {children}
         </Sidebar.Pusher>
       </Responsive>
@@ -188,12 +184,12 @@ MobileContainer.propTypes = {
   children: PropTypes.node
 };
 
-const ResponsiveContainer = ({ children, headerText }) =>
+const ResponsiveContainer = ({ children }) =>
   <div>
-    <DesktopContainer headerText={headerText}>
+    <DesktopContainer>
       {children}
     </DesktopContainer>
-    <MobileContainer headerText={headerText}>
+    <MobileContainer>
       {children}
     </MobileContainer>
   </div>;

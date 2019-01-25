@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Header, List, Segment } from "semantic-ui-react";
 
 const Footer = () => {
@@ -10,8 +11,16 @@ const Footer = () => {
             <Grid.Column width={3}>
               <Header inverted as="h4" content="About" />
               <List link inverted>
-                <List.Item as="a">Business</List.Item>
-                <List.Item as="a">Contact Us</List.Item>
+                <List.Item>Business</List.Item>
+                <List.Item>
+                  <Link to="contact">Contact Us</Link>
+                </List.Item>
+                <List.Item>
+                  <Link to="gallery">Gallery</Link>
+                </List.Item>
+                <List.Item>
+                  <Link to="jobs">Jobs</Link>
+                </List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
