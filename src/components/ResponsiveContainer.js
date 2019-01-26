@@ -158,7 +158,7 @@ class MobileContainer extends Component {
             textAlign="center"
             style={{
               maxHeight: 500,
-              padding: "1em 0em",
+              padding: "0em",
               background:
                 "url(" + headerImageMobile + ") no-repeat center center",
               webkitBackgroundSize: "cover",
@@ -166,7 +166,12 @@ class MobileContainer extends Component {
             }}
             vertical
           >
-            <Container>
+            <div
+              style={{
+                backgroundColor: "#262626",
+                margin: "0"
+              }}
+            >
               <Menu inverted pointing secondary size="large">
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name="sidebar" />
@@ -184,7 +189,7 @@ class MobileContainer extends Component {
                   </Button>
                 </Menu.Item>
               </Menu>
-            </Container>
+            </div>
             <PageRoutingMobile setPage={this.setPage} />
           </Segment>
           {children}
