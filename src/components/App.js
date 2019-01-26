@@ -10,15 +10,13 @@ import DisplayAbout from "./Displays/DisplayAbout";
 import Footer from "./Footer.js";
 
 class App extends React.Component {
-  state = {
-    headerText: "Cruz Urbina Landscapes"
-  };
+  state = {};
 
   render() {
     return (
       <Router history={history}>
         <Switch>
-          <ResponsiveContainer headerText={this.state.headerText}>
+          <ResponsiveContainer>
             <Route path="/" exact component={DisplayIntro} />
             <Route path="/" exact component={DisplayReviews} />
             <Route path="/" exact component={DisplayDescriptive} />

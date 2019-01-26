@@ -13,7 +13,7 @@ import {
   Visibility
 } from "semantic-ui-react";
 
-import ImageHeader1 from "../assets/images/ImageHomeHeader1.jpg";
+import GenerateHeader from "./Headers/GenerateHeader";
 
 import NavBarDrop from "./Widgets/NavBarDrop";
 import SideBarDrop from "./Widgets/SideBarDrop";
@@ -26,19 +26,17 @@ const getWidth = () => {
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth;
 };
 
-/* Heads up!
-     * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
-     * It can be more complicated, but you can create really flexible markup.
-     */
 class DesktopContainer extends Component {
-  state = {};
+  state = { page: "home" };
 
   hideFixedMenu = () => this.setState({ fixed: false });
   showFixedMenu = () => this.setState({ fixed: true });
+  setPage = pageName => this.setState({ page: pageName });
 
   render() {
     const { children } = this.props;
     const { fixed } = this.state;
+    const { headerImage } = GenerateHeader(this.state.page);
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
@@ -51,8 +49,11 @@ class DesktopContainer extends Component {
             inverted
             textAlign="center"
             style={{
-              maxHeight: 900,
-              padding: "0em 0em"
+              maxHeight: "900px",
+              padding: "0em 0em",
+              background: "url(" + headerImage + ") no-repeat center center",
+              webkitBackgroundSize: "cover",
+              backgroundSize: "cover"
             }}
             vertical
           >
@@ -93,7 +94,7 @@ class DesktopContainer extends Component {
                 </Menu.Item>
               </Container>
             </Menu>
-            <PageRouting />
+            <PageRouting setPage={this.setPage} />
           </Segment>
         </Visibility>
 
@@ -111,12 +112,13 @@ class MobileContainer extends Component {
   state = {};
 
   handleSidebarHide = () => this.setState({ sidebarOpened: false });
-
   handleToggle = () => this.setState({ sidebarOpened: true });
+  setPage = pageName => this.setState({ page: pageName });
 
   render() {
     const { children } = this.props;
     const { sidebarOpened } = this.state;
+    const { headerImageMobile } = GenerateHeader(this.state.page);
 
     return (
       <Responsive
@@ -154,7 +156,14 @@ class MobileContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ maxHeight: 500, padding: "1em 0em" }}
+            style={{
+              maxHeight: 500,
+              padding: "1em 0em",
+              background:
+                "url(" + headerImageMobile + ") no-repeat center center",
+              webkitBackgroundSize: "cover",
+              backgroundSize: "cover"
+            }}
             vertical
           >
             <Container>
@@ -176,7 +185,7 @@ class MobileContainer extends Component {
                 </Menu.Item>
               </Menu>
             </Container>
-            <PageRoutingMobile />
+            <PageRoutingMobile setPage={this.setPage} />
           </Segment>
           {children}
         </Sidebar.Pusher>

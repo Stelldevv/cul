@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Container,
-  Grid,
-  Header,
-  Image,
-  Segment
-} from "semantic-ui-react";
+import { Grid, Header, Image, Segment } from "semantic-ui-react";
 
 const DisplayAbout = () =>
   <Segment style={{ padding: "8em 0em" }} vertical>

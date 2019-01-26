@@ -7,6 +7,10 @@ import GenerateHeader from "./GenerateHeader";
 class PageHeading extends Component {
   state = { page: this.props.page };
 
+  componentDidMount() {
+    this.props.setPage(this.state.page);
+  }
+
   render() {
     return (
       <Container text>

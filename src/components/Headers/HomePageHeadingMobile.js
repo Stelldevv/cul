@@ -2,8 +2,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Header, Icon } from "semantic-ui-react";
 
+import GenerateHeader from "./GenerateHeader";
+
 class HomePageHeadingMobile extends Component {
-  state = {};
+  state = { page: this.props.page };
+
+  componentDidMount() {
+    this.props.setPage(this.state.page);
+  }
 
   render() {
     return (
@@ -11,24 +17,26 @@ class HomePageHeadingMobile extends Component {
         <Header
           as="h1"
           inverted
-          content={"Cruz Urbina Landscapes"}
           style={{
             fontSize: "2em",
             fontWeight: "normal",
             marginBottom: 0,
             marginTop: "2em"
           }}
-        />
+        >
+          {GenerateHeader(this.state.page).titleText}
+        </Header>
         <Header
           as="h2"
-          content="Cruzin' with excellence for over 10 years!"
           inverted
           style={{
             fontSize: "1.5em",
             fontWeight: "normal",
             marginTop: "0.5em"
           }}
-        />
+        >
+          {GenerateHeader(this.state.page).descText}
+        </Header>
         <Button
           primary
           size="medium"
