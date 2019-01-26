@@ -17,7 +17,7 @@ class PageHeading extends Component {
             fontSize: "3.5em",
             fontWeight: "normal",
             marginBottom: 0,
-            marginTop: "1em"
+            marginTop: "3em"
           }}
         >
           {GenerateHeader(this.state.page).titleText}
@@ -29,7 +29,8 @@ class PageHeading extends Component {
             fontSize: "1.7em",
             fontWeight: "normal",
             marginTop: "1.5em",
-            marginBottom: "1em"
+            marginBottom: "1em",
+            padding: "0 0 7em 0"
           }}
         >
           {GenerateHeader(this.state.page).descText}

@@ -16,7 +16,7 @@ class HomePageHeadingMobile extends Component {
             fontSize: "2em",
             fontWeight: "normal",
             marginBottom: 0,
-            marginTop: "1.5em"
+            marginTop: "2em"
           }}
         />
         <Header
@@ -34,7 +34,7 @@ class HomePageHeadingMobile extends Component {
           size="medium"
           style={{
             marginTop: "1em",
-            marginBottom: "1.8em"
+            marginBottom: "5em"
           }}
         >
           <Link

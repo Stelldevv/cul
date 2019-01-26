@@ -13,6 +13,8 @@ import {
   Visibility
 } from "semantic-ui-react";
 
+import ImageHeader1 from "../assets/images/ImageHomeHeader1.jpg";
+
 import NavBarDrop from "./Widgets/NavBarDrop";
 import SideBarDrop from "./Widgets/SideBarDrop";
 import PageRouting from "./Routing/PageRouting";
@@ -48,7 +50,10 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ maxHeight: 700, padding: "1em 0em" }}
+            style={{
+              maxHeight: 900,
+              padding: "0em 0em"
+            }}
             vertical
           >
             <Menu
@@ -57,6 +62,10 @@ class DesktopContainer extends Component {
               pointing={!fixed}
               secondary={!fixed}
               size="large"
+              style={{
+                backgroundColor: "#262626",
+                padding: "0.5em 0em"
+              }}
             >
               <Container>
                 <Menu.Item>
@@ -145,7 +154,7 @@ class MobileContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ maxHeight: 350, padding: "1em 0em" }}
+            style={{ maxHeight: 500, padding: "1em 0em" }}
             vertical
           >
             <Container>

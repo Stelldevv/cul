@@ -6,6 +6,7 @@ import ResponsiveContainer from "./ResponsiveContainer";
 import DisplayIntro from "./Displays/DisplayIntro";
 import DisplayReviews from "./Displays/DisplayReviews";
 import DisplayDescriptive from "./Displays/DisplayDescriptive";
+import DisplayAbout from "./Displays/DisplayAbout";
 import Footer from "./Footer.js";
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
             <Route path="/" exact component={DisplayIntro} />
             <Route path="/" exact component={DisplayReviews} />
             <Route path="/" exact component={DisplayDescriptive} />
+            <Route path="/about" exact component={DisplayAbout} />
             <Route path="/" component={Footer} />
           </ResponsiveContainer>
         </Switch>

@@ -8,7 +8,7 @@ const GenerateHeader = page => {
   if (page === "about") {
     return {
       titleText: "Cruz's Mission",
-      descText: "No brick unleveled."
+      descText: "Landscaping done right."
     };
   }
   if (page === "estimate") {

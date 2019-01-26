@@ -9,7 +9,7 @@ const NavBarDrop = () =>
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      padding: "0.9em 1em",
+      padding: "0.86em 1em",
       margin: "0em 0.5em"
     }}
   >
@@ -17,7 +17,7 @@ const NavBarDrop = () =>
       <Dropdown.Menu>
         <Dropdown.Item>
           <Link
-            to="/services"
+            to="/services#residential"
             style={{
               color: "black"
             }}
@@ -27,7 +27,7 @@ const NavBarDrop = () =>
         </Dropdown.Item>
         <Dropdown.Item>
           <Link
-            to="/services"
+            to="/services#commercial"
             style={{
               color: "black"
             }}
@@ -37,7 +37,7 @@ const NavBarDrop = () =>
         </Dropdown.Item>
         <Dropdown.Item>
           <Link
-            to="/services"
+            to="/services#contracting"
             style={{
               color: "black"
             }}

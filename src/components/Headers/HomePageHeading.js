@@ -16,7 +16,9 @@ class HomePageHeading extends Component {
             fontSize: "4em",
             fontWeight: "normal",
             marginBottom: 0,
-            marginTop: "2em"
+            marginTop: "3em",
+            color: "#262626",
+            fontWeight: "bold"
           }}
         />
         <Header
@@ -27,14 +29,16 @@ class HomePageHeading extends Component {
             fontSize: "1.7em",
             fontWeight: "normal",
             marginTop: "1.5em",
-            marginBottom: "1.5em"
+            marginBottom: "1.5em",
+            color: "#262626",
+            fontWeight: "bold"
           }}
         />
         <Button
           primary
           size="huge"
           style={{
-            marginBottom: "6em"
+            marginBottom: "10em"
           }}
         >
           <Link
