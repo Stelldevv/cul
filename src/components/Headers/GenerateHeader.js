@@ -4,6 +4,7 @@ import ContactHeaderImage from "../../assets/images/ImageContactHeader.jpeg";
 import ServicesHeaderImage from "../../assets/images/ImageServicesHeader.jpeg";
 import JobsHeaderImage from "../../assets/images/ImageJobsHeader.jpg";
 import EstimateHeaderImage from "../../assets/images/ImageEstimateHeader.jpeg";
+import GalleryHeaderImage from "../../assets/images/ImageGalleryHeader.jpeg";
 
 const GenerateHeader = page => {
   if (page === "home") {
@@ -48,7 +49,9 @@ const GenerateHeader = page => {
   if (page === "gallery") {
     return {
       titleText: "Gallery",
-      descText: "Check out my work!"
+      descText: "Check out my work!",
+      headerImage: GalleryHeaderImage,
+      headerImageMobile: GalleryHeaderImage
     };
   }
   if (page === "jobs") {
