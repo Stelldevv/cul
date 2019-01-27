@@ -7,6 +7,8 @@ import testPic3 from "../../assets/images/testpic3.jpeg";
 import testPic4 from "../../assets/images/testpic4.jpg";
 import testPic5 from "../../assets/images/testpic5.jpeg";
 
+import ReactGallery from "../Widgets/ReactGallery";
+
 const DisplayGallery = () =>
   <Segment style={{ padding: "8em 0em" }} vertical>
     <Header
@@ -49,6 +51,15 @@ const DisplayGallery = () =>
         <Image src={testPic2} />
       </Grid.Column>
     </Grid>
+
+    <Header
+      as="h3"
+      textAlign="center"
+      style={{ fontSize: "2em", marginBottom: "1em" }}
+    >
+      Commercial
+    </Header>
+    <ReactGallery />
   </Segment>;
 
 export default DisplayGallery;
