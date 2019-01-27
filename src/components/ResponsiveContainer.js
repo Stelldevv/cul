@@ -52,7 +52,9 @@ class DesktopContainer extends Component {
               maxHeight: "900px",
               padding: "0em 0em",
               background: "url(" + headerImage + ") no-repeat center center",
-              webkitBackgroundSize: "cover",
+              WebkitBackgroundSize: "cover",
+              MozBackgroundSize: "cover",
+              OBackgroundSize: "cover",
               backgroundSize: "cover"
             }}
             vertical
@@ -161,7 +163,9 @@ class MobileContainer extends Component {
               padding: "0em",
               background:
                 "url(" + headerImageMobile + ") no-repeat center center",
-              webkitBackgroundSize: "cover",
+              WebkitBackgroundSize: "cover",
+              MozBackgroundSize: "cover",
+              OBackgroundSize: "cover",
               backgroundSize: "cover"
             }}
             vertical

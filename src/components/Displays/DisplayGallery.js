@@ -1,65 +1,50 @@
 import React from "react";
-import { Grid, Header, Image, Segment } from "semantic-ui-react";
+import { Header, Segment } from "semantic-ui-react";
+import ReactGalleryLightBox from "../Widgets/ReactGalleryLightBox";
 
 import testPic1 from "../../assets/images/testpic1.jpeg";
-import testPic2 from "../../assets/images/testpic2.jpeg";
-import testPic3 from "../../assets/images/testpic3.jpeg";
-import testPic4 from "../../assets/images/testpic4.jpg";
-import testPic5 from "../../assets/images/testpic5.jpeg";
 
-import ReactGallery from "../Widgets/ReactGallery";
+import testPic3 from "../../assets/images/testpic3.jpeg";
+import testPic5 from "../../assets/images/testpic5.jpeg";
+import testPicWide from "../../assets/images/testpicWide.jpeg";
+import testPicWide2 from "../../assets/images/testpicWide2.jpeg";
+import testPicTall from "../../assets/images/testpicTall.jpeg";
+
+const photoPack = [
+  testPic1,
+  testPic3,
+  testPicTall,
+  testPic5,
+  testPicWide2,
+  testPicWide
+];
 
 const DisplayGallery = () =>
-  <Segment style={{ padding: "8em 0em" }} vertical>
+  <Segment style={{ padding: "1em 0 8em 0" }} vertical>
     <Header
       as="h3"
       textAlign="center"
-      style={{ fontSize: "2em", marginBottom: "1em" }}
+      style={{ fontSize: "2em", margin: "3em 0em" }}
     >
-      Residential
+      Residential Landscaping
     </Header>
-    <Grid container columns={3}>
-      <Grid.Column>
-        <Image src={testPic1} />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={testPic2} />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={testPic4} />
-      </Grid.Column>
-    </Grid>
-    <Grid container columns={3}>
-      <Grid.Column>
-        <Image src={testPic4} />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={testPic3} />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={testPic1} />
-      </Grid.Column>
-    </Grid>
-    <Grid container columns={3}>
-      <Grid.Column>
-        <Image src={testPic2} />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={testPic5} />
-      </Grid.Column>
-      <Grid.Column>
-        <Image src={testPic2} />
-      </Grid.Column>
-    </Grid>
-
+    <ReactGalleryLightBox photoPack={photoPack} />
     <Header
       as="h3"
       textAlign="center"
-      style={{ fontSize: "2em", marginBottom: "1em" }}
+      style={{ fontSize: "2em", margin: "3em 0em" }}
     >
-      Commercial
+      Commercial Landscaping
     </Header>
-    <ReactGallery />
+    <ReactGalleryLightBox photoPack={photoPack} />
+    <Header
+      as="h3"
+      textAlign="center"
+      style={{ fontSize: "2em", margin: "3em 0em" }}
+    >
+      Contracting Work
+    </Header>
+    <ReactGalleryLightBox photoPack={photoPack} />
   </Segment>;
 
 export default DisplayGallery;
