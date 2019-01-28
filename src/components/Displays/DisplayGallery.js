@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Segment } from "semantic-ui-react";
-import ReactGalleryLightBox from "../Widgets/ReactGalleryLightBox";
+import GalleryLightBox from "../Widgets/GalleryLightBox";
 
 import testPic1 from "../../assets/images/testpic1.jpeg";
 
@@ -28,7 +28,7 @@ const DisplayGallery = () =>
     >
       Residential Landscaping
     </Header>
-    <ReactGalleryLightBox photoPack={photoPack} />
+    <GalleryLightBox photoPack={photoPack} />
     <Header
       as="h3"
       textAlign="center"
@@ -36,7 +36,7 @@ const DisplayGallery = () =>
     >
       Commercial Landscaping
     </Header>
-    <ReactGalleryLightBox photoPack={photoPack} />
+    <GalleryLightBox photoPack={photoPack} />
     <Header
       as="h3"
       textAlign="center"
@@ -44,7 +44,7 @@ const DisplayGallery = () =>
     >
       Contracting Work
     </Header>
-    <ReactGalleryLightBox photoPack={photoPack} />
+    <GalleryLightBox photoPack={photoPack} />
   </Segment>;
 
 export default DisplayGallery;
