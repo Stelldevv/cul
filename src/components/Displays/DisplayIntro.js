@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Grid, Header, Image, Segment } from "semantic-ui-react";
 
+import ImageCarousel from "../Widgets/ImageCarousel";
+
 const DisplayIntro = () => {
   return (
     <Segment style={{ padding: "8em 0em" }} vertical>
@@ -24,12 +26,7 @@ const DisplayIntro = () => {
             </p>
           </Grid.Column>
           <Grid.Column floated="right" width={6}>
-            <Image
-              bordered
-              rounded
-              size="large"
-              src="https://i.imgur.com/0BLIVmV.jpg"
-            />
+            <ImageCarousel />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>

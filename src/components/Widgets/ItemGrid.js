@@ -62,7 +62,7 @@ class ItemGrid extends Component {
                   margin: "1em 0"
                 }}
               >
-                <Reveal animated="move down">
+                <Reveal animated="move up">
                   <Reveal.Content visible>
                     <Image
                       src={placeHolder}
@@ -120,7 +120,7 @@ class ItemGrid extends Component {
                   margin: "1em 0"
                 }}
               >
-                <Reveal animated="move down">
+                <Reveal animated="move up">
                   <Reveal.Content visible>
                     <Image
                       src={placeHolder}
@@ -178,7 +178,7 @@ class ItemGrid extends Component {
                   margin: "1em 0"
                 }}
               >
-                <Reveal animated="move down">
+                <Reveal animated="move up">
                   <Reveal.Content visible>
                     <Image
                       src={placeHolder}
@@ -236,7 +236,7 @@ class ItemGrid extends Component {
                   margin: "1em 0"
                 }}
               >
-                <Reveal animated="move down">
+                <Reveal animated="move up">
                   <Reveal.Content visible>
                     <Image
                       src={placeHolder}

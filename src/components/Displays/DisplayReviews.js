@@ -21,7 +21,7 @@ const DisplayReviews = () => {
             </Header>
             <p style={{ fontSize: "1.33em" }}>
               <Image avatar src="https://i.imgur.com/0UjJ7o2.gif" />
-              <b>Tom</b> Father of eight
+              <b>Tom</b> Father of eight, TV Interview on "60-Minutes"
             </p>
           </Grid.Column>
         </Grid.Row>

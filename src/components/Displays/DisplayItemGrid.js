@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "semantic-ui-react";
+import { Container, Segment } from "semantic-ui-react";
 
 import ItemGrid from "../Widgets/ItemGrid";
 
@@ -9,9 +9,30 @@ class DisplayItemGrid extends Component {
   render() {
     return (
       <Container>
-        <ItemGrid text={"Residential Service"} section={"residential"} />
-        <ItemGrid text={"Commercial Service"} section={"commercial"} />
-        <ItemGrid text={"Contracting Service"} section={"contracting"} />
+        <Segment
+          raised
+          style={{
+            margin: "1em 0.5em"
+          }}
+        >
+          <ItemGrid text={"Residential Services"} section={"residential"} />
+        </Segment>
+        <Segment
+          raised
+          style={{
+            margin: "1em 0.5em"
+          }}
+        >
+          <ItemGrid text={"Commercial Services"} section={"commercial"} />
+        </Segment>
+        <Segment
+          raised
+          style={{
+            margin: "1em 0.5em"
+          }}
+        >
+          <ItemGrid text={"Contracting Services"} section={"contracting"} />
+        </Segment>
       </Container>
     );
   }

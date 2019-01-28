@@ -21,30 +21,36 @@ const photoPack = [
 
 const DisplayGallery = () =>
   <Segment style={{ padding: "1em 0 8em 0" }} vertical>
-    <Header
-      as="h3"
-      textAlign="center"
-      style={{ fontSize: "2em", margin: "3em 0em" }}
-    >
-      Residential Landscaping
-    </Header>
-    <GalleryLightBox photoPack={photoPack} />
-    <Header
-      as="h3"
-      textAlign="center"
-      style={{ fontSize: "2em", margin: "3em 0em" }}
-    >
-      Commercial Landscaping
-    </Header>
-    <GalleryLightBox photoPack={photoPack} />
-    <Header
-      as="h3"
-      textAlign="center"
-      style={{ fontSize: "2em", margin: "3em 0em" }}
-    >
-      Contracting Work
-    </Header>
-    <GalleryLightBox photoPack={photoPack} />
+    <Segment raised>
+      <Header
+        as="h3"
+        textAlign="center"
+        style={{ fontSize: "2em", margin: "3em 0em" }}
+      >
+        Residential Landscaping
+      </Header>
+      <GalleryLightBox photoPack={photoPack} />
+    </Segment>
+    <Segment raised>
+      <Header
+        as="h3"
+        textAlign="center"
+        style={{ fontSize: "2em", margin: "3em 0em" }}
+      >
+        Commercial Landscaping
+      </Header>
+      <GalleryLightBox photoPack={photoPack} />
+    </Segment>
+    <Segment raised>
+      <Header
+        as="h3"
+        textAlign="center"
+        style={{ fontSize: "2em", margin: "3em 0em" }}
+      >
+        Contracting Work
+      </Header>
+      <GalleryLightBox photoPack={photoPack} />
+    </Segment>
   </Segment>;
 
 export default DisplayGallery;

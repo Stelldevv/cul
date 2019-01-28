@@ -18,7 +18,7 @@ const GenerateHeader = page => {
   if (page === "services") {
     return {
       titleText: "Landscaping Services",
-      descText: "I've got you covered.",
+      descText: "We've got you covered.",
       headerImage: ServicesHeaderImage,
       headerImageMobile: ServicesHeaderImage
     };
@@ -34,7 +34,7 @@ const GenerateHeader = page => {
   if (page === "estimate") {
     return {
       titleText: "Let's get to work!",
-      descText: "Send me the details.",
+      descText: "Send us the details.",
       headerImage: EstimateHeaderImage,
       headerImageMobile: EstimateHeaderImage
     };
@@ -49,7 +49,7 @@ const GenerateHeader = page => {
   if (page === "gallery") {
     return {
       titleText: "Gallery",
-      descText: "Check out my work!",
+      descText: "Check out our work!",
       headerImage: GalleryHeaderImage,
       headerImageMobile: GalleryHeaderImage
     };
@@ -57,7 +57,7 @@ const GenerateHeader = page => {
   if (page === "jobs") {
     return {
       titleText: "Jobs",
-      descText: "So you wanna work for me?",
+      descText: "So you wanna work with us, huh?",
       headerImage: JobsHeaderImage,
       headerImageMobile: JobsHeaderImage
     };
