@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Header, List, Segment } from "semantic-ui-react";
 
+import ServiceMap from "./Widgets/MapBoxRotate";
+
 const Footer = () => {
   return (
-    <Segment inverted vertical style={{ padding: "5em 0em" }}>
+    <Segment inverted vertical style={{ padding: "5em 2em" }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
@@ -39,6 +41,7 @@ const Footer = () => {
             </Grid.Column>
           </Grid.Row>
         </Grid>
+        <ServiceMap />
       </Container>
     </Segment>
   );

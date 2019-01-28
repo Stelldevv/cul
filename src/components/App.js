@@ -12,6 +12,8 @@ import DisplayGallery from "./Displays/DisplayGallery";
 import DisplayItemGrid from "./Displays/DisplayItemGrid";
 import Footer from "./Footer.js";
 
+import ServiceMap from "./Widgets/MapBoxRotate";
+
 const browserHistory = createBrowserHistory();
 
 browserHistory.listen(location => {
@@ -45,6 +47,7 @@ class App extends React.Component {
             <Route path="/about" exact component={DisplayAbout} />
             <Route path="/gallery" exact component={DisplayGallery} />
             <Route path="/services" exact component={DisplayItemGrid} />
+            <Route path="/Map" exact component={ServiceMap} />
             <Route path="/" component={Footer} />
           </ResponsiveContainer>
         </Switch>

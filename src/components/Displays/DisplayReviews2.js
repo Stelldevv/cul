@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Header, Rating, Segment, Image } from "semantic-ui-react";
+import { Grid, Header, Rating, Segment } from "semantic-ui-react";
 
 import ReviewCarousel from "../Widgets/ReviewCarousel";
 

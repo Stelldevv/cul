@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Grid, Header, Image, Segment } from "semantic-ui-react";
+import { Button, Grid, Header, Segment } from "semantic-ui-react";
 
 import ImageCarousel from "../Widgets/ImageCarousel";
 

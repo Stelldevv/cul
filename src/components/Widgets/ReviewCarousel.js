@@ -52,8 +52,8 @@ class ReviewCarousel extends React.Component {
                 color: "grey"
               }}
             >
-              *Website Editor's Note: Puppet is a dog and, apparently, a good
-              boy."
+              *Website Editor's Note: <br /> Puppet is a dog and, apparently, a
+              good boy."
             </h6>
           </h3>
           <h2>- Jigyasha S.</h2> <br />
