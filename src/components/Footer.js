@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Header, List, Segment } from "semantic-ui-react";
 
-import ServiceMap from "./Widgets/MapBoxRotate";
+import ServiceMap from "./Widgets/MapBox";
 
 const Footer = () => {
   return (

@@ -6,6 +6,7 @@
     "history": "^4.7.2",
     "mapbox-gl": "^0.52.0",
     "prop-types": "^15.6.2",
+    "radium": "^0.25.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-image-gallery": "^0.8.12",
