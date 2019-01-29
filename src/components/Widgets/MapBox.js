@@ -1,6 +1,9 @@
 import React from "react";
 import mapboxgl from "mapbox-gl";
 import { Container } from "semantic-ui-react";
+import Radium from "radium";
+
+import mapMarker from "../../assets/images/mapMarker.png";
 
 mapboxgl.accessToken =
   "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w";
@@ -20,11 +23,41 @@ class ServiceMap extends React.Component {
       container: "map",
       style: "mapbox://styles/stelldev/cjrh3uy7a06gy2trqekgxb3oa",
       center: [-123.0707, 44.949],
-      zoom: 5.7,
+      zoom: 5.5,
       bearing: 0,
       pitch: 50,
       interactive: false,
       attributionControl: true
+    });
+
+    var geojson = {
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          properties: {
+            message: "Cruz Urbina Landscapes",
+            iconSize: [64, 64]
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [-123.0707, 44.949]
+          }
+        }
+      ]
+    };
+
+    geojson.features.forEach(function(marker) {
+      // create a DOM element for the marker
+      var el = document.createElement("div");
+      el.className = "marker";
+      el.style.backgroundImage = "url(" + mapMarker + ")";
+      el.style.width = marker.properties.iconSize[0] + "px";
+      el.style.height = marker.properties.iconSize[1] + "px";
+      el.style.opacity = "0.75";
+
+      // add marker to map
+      new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
     });
 
     function easing(t) {
@@ -119,46 +152,56 @@ class ServiceMap extends React.Component {
         },
         layout: {},
         paint: {
-          "fill-color": "#3C3",
-          "fill-opacity": 0.35
+          "fill-color": "#0b7a19",
+          "fill-opacity": 0.5
         }
       });
     });
   }
 
   render() {
+    var style = {
+      borderRadius: "10px",
+      "@media only screen and (min-width: 601px)": {
+        position: "absolute",
+        bottom: "0",
+        right: "0",
+        width: "19em",
+        height: "19em",
+        margin: "1em 1em"
+      },
+      "@media only screen and (max-width: 600px)": {
+        position: "absolute",
+        top: "0",
+        right: "0",
+        width: "15em",
+        height: "15em",
+        margin: "7em 2em 0em 0em"
+      },
+      "@media only screen and (max-width: 325px)": {
+        position: "absolute",
+        top: "0",
+        right: "0",
+        width: "12em",
+        height: "12em",
+        margin: "7em 2em 0em 0em"
+      }
+    };
     return (
-      <Container
-        style={{
-          position: "absolute",
-          right: "0",
-          bottom: "0",
-          width: "30em",
-          height: "30em"
-        }}
-      >
+      <Container>
         <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js" />
         <link
           href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css"
           rel="stylesheet"
         />
-        <link href="./MapBox.css" rel="stylesheet" />
-        <div
-          id="map"
-          style={{
-            position: "absolute",
-            right: "0",
-            bottom: "0",
-            width: "19em",
-            height: "19em",
-            margin: "1em 1em"
-          }}
-        >
+        <div id="map" style={style}>
           <div id="liveMap" ref={el => (this.mapContainer = el)} />
         </div>
       </Container>
     );
   }
 }
+
+ServiceMap = Radium(ServiceMap);
 
 export default ServiceMap;
