@@ -12,6 +12,7 @@ import DisplayEstimate from "./Displays/DisplayEstimate";
 import DisplayGallery from "./Displays/DisplayGallery";
 import DisplayServices from "./Displays/DisplayServices";
 import DisplayJobs from "./Displays/DisplayJobs";
+import DisplayContact from "./Displays/DisplayContact";
 import Footer from "./Footer.js";
 
 const browserHistory = createBrowserHistory();
@@ -49,6 +50,7 @@ class App extends React.Component {
             <Route path="/services" exact component={DisplayServices} />
             <Route path="/estimate" exact component={DisplayEstimate} />
             <Route path="/jobs" exact component={DisplayJobs} />
+            <Route path="/contact" exact component={DisplayContact} />
             <Route path="/" component={Footer} />
           </ResponsiveContainer>
         </Switch>

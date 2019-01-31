@@ -163,20 +163,36 @@ class ServiceMap extends React.Component {
   render() {
     var style = {
       borderRadius: "10px",
-      "@media only screen and (min-width: 601px)": {
+      "@media only screen and (min-width: 768px)": {
         position: "absolute",
         bottom: "0",
         right: "0",
         width: "18em",
         height: "18em",
-        margin: "1.5em 1.5em"
+        margin: "1.5em 6em 1.5em 1.5em"
+      },
+      "@media only screen and (max-width: 767px)": {
+        position: "absolute",
+        bottom: "0",
+        right: "0",
+        width: "25em",
+        height: "33em",
+        margin: "0em 4em 7em 0em"
       },
       "@media only screen and (max-width: 600px)": {
         position: "absolute",
         top: "0",
         right: "0",
-        width: "15em",
-        height: "15em",
+        width: "18em",
+        height: "18em",
+        margin: "7em 2em 0em 0em"
+      },
+      "@media only screen and (max-width: 400px)": {
+        position: "absolute",
+        top: "0",
+        right: "0",
+        width: "16em",
+        height: "16em",
         margin: "7em 2em 0em 0em"
       },
       "@media only screen and (max-width: 325px)": {

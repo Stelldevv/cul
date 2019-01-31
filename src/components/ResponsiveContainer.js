@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import ScrollUpButton from "react-scroll-up-button";
+
 import {
   Button,
   Container,
@@ -79,6 +81,9 @@ class DesktopContainer extends Component {
                   <Link to="/about">About</Link>
                 </Menu.Item>
                 <Menu.Item position="right">
+                  <Link to="/contact">Contact</Link>
+                </Menu.Item>
+                <Menu.Item>
                   <Button
                     inverted={!fixed}
                     primary={fixed}
@@ -99,7 +104,6 @@ class DesktopContainer extends Component {
             <PageRouting setPage={this.setPage} />
           </Segment>
         </Visibility>
-
         {children}
       </Responsive>
     );
@@ -148,8 +152,13 @@ class MobileContainer extends Component {
             </Link>
           </Menu.Item>
           <Menu.Item>
+            <Link to="/contact" onClick={this.handleSidebarHide}>
+              Contact Us
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
             <Link to="/estimate" onClick={this.handleSidebarHide}>
-              Quote Me!
+              Service Estimate
             </Link>
           </Menu.Item>
         </Sidebar>
@@ -188,7 +197,7 @@ class MobileContainer extends Component {
                         color: "white"
                       }}
                     >
-                      Quote Me!
+                      Free Estimate
                     </Link>
                   </Button>
                 </Menu.Item>
@@ -196,6 +205,7 @@ class MobileContainer extends Component {
             </div>
             <PageRoutingMobile setPage={this.setPage} />
           </Segment>
+
           {children}
         </Sidebar.Pusher>
       </Responsive>
@@ -209,6 +219,11 @@ MobileContainer.propTypes = {
 
 const ResponsiveContainer = ({ children }) =>
   <div>
+    <ScrollUpButton
+      EasingType="easeInOutBack"
+      ShowAtPosition={700}
+      AnimationDuration={1500}
+    />
     <DesktopContainer>
       {children}
     </DesktopContainer>

@@ -154,7 +154,7 @@ const EstimateForm = () =>
       required
     />
 
-    <label>Hardscape Services Available (Check all that apply)</label>
+    <label>Hardscape Services Requested (Check all that apply)</label>
     <Form.Group widths="equal">
       <Form.Group
         style={{
@@ -186,7 +186,7 @@ const EstimateForm = () =>
       </Form.Group>
     </Form.Group>
 
-    <label>Softscape Services Available (Check all that apply)</label>
+    <label>Softscape Services Requested (Check all that apply)</label>
     <Form.Group widths="equal">
       <Form.Group
         style={{
@@ -210,7 +210,6 @@ const EstimateForm = () =>
       </Form.Group>
       <Form.Group
         style={{
-          marginLeft: "3em",
           marginTop: "1.5em"
         }}
         grouped
