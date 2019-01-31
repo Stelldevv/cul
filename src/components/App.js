@@ -8,8 +8,10 @@ import DisplayReviews from "./Displays/DisplayReviews";
 import DisplayReviews2 from "./Displays/DisplayReviews2";
 import DisplayDescriptive from "./Displays/DisplayDescriptive";
 import DisplayAbout from "./Displays/DisplayAbout";
+import DisplayEstimate from "./Displays/DisplayEstimate";
 import DisplayGallery from "./Displays/DisplayGallery";
-import DisplayItemGrid from "./Displays/DisplayItemGrid";
+import DisplayServices from "./Displays/DisplayServices";
+import DisplayJobs from "./Displays/DisplayJobs";
 import Footer from "./Footer.js";
 
 const browserHistory = createBrowserHistory();
@@ -44,7 +46,9 @@ class App extends React.Component {
             <Route path="/" exact component={DisplayDescriptive} />
             <Route path="/about" exact component={DisplayAbout} />
             <Route path="/gallery" exact component={DisplayGallery} />
-            <Route path="/services" exact component={DisplayItemGrid} />
+            <Route path="/services" exact component={DisplayServices} />
+            <Route path="/estimate" exact component={DisplayEstimate} />
+            <Route path="/jobs" exact component={DisplayJobs} />
             <Route path="/" component={Footer} />
           </ResponsiveContainer>
         </Switch>

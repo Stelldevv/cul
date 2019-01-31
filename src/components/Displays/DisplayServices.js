@@ -3,7 +3,7 @@ import { Container, Segment } from "semantic-ui-react";
 
 import ItemGrid from "../Widgets/ItemGrid";
 
-class DisplayItemGrid extends Component {
+class DisplayServices extends Component {
   state = {};
 
   render() {
@@ -38,4 +38,4 @@ class DisplayItemGrid extends Component {
   }
 }
 
-export default DisplayItemGrid;
+export default DisplayServices;

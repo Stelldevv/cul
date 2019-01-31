@@ -23,7 +23,7 @@ const Footer = () => {
                     <Link to="/gallery">Gallery</Link>
                   </List.Item>
                   <List.Item>
-                    <Link to="/jobs">Jobs</Link>
+                    <Link to="/jobs">Employment</Link>
                   </List.Item>
                 </List>
               </Grid.Column>

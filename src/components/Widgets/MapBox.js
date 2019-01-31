@@ -7,6 +7,7 @@ import mapMarker from "../../assets/images/mapMarker.png";
 
 mapboxgl.accessToken =
   "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w";
+//Enable with "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w"
 
 class ServiceMap extends React.Component {
   constructor(props) {
@@ -166,9 +167,9 @@ class ServiceMap extends React.Component {
         position: "absolute",
         bottom: "0",
         right: "0",
-        width: "19em",
-        height: "19em",
-        margin: "1em 1em"
+        width: "18em",
+        height: "18em",
+        margin: "1.5em 1.5em"
       },
       "@media only screen and (max-width: 600px)": {
         position: "absolute",
