@@ -1,6 +1,7 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import PropTypes from "prop-types";
 
 import ResponsiveContainer from "./ResponsiveContainer";
 import DisplayIntro from "./Displays/DisplayIntro";
@@ -48,7 +49,17 @@ class App extends React.Component {
             <Route path="/about" exact component={DisplayAbout} />
             <Route path="/gallery" exact component={DisplayGallery} />
             <Route path="/services" exact component={DisplayServices} />
-            <Route path="/estimate" exact component={DisplayEstimate} />
+            <Route
+              path="/estimate"
+              exact
+              render={routeProps =>
+                <DisplayEstimate
+                  {...routeProps}
+                  page="estimate"
+                  setPage={this.props.setPage}
+                  env={this.props.env}
+                />}
+            />
             <Route path="/jobs" exact component={DisplayJobs} />
             <Route path="/contact" exact component={DisplayContact} />
             <Route path="/" component={Footer} />
@@ -58,5 +69,9 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  env: PropTypes.object.isRequired
+};
 
 export default App;

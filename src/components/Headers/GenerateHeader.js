@@ -1,4 +1,6 @@
 import HomeHeaderImage1 from "../../assets/images/ImageHomeHeader1.jpg";
+import HomeHeaderImage2 from "../../assets/images/testpic4.jpg";
+import HomeHeaderImage3 from "../../assets/images/testpic5.jpeg";
 import AboutHeaderImage from "../../assets/images/ImageAboutHeader.jpg";
 import ContactHeaderImage from "../../assets/images/ImageContactHeader.jpeg";
 import ServicesHeaderImage from "../../assets/images/ImageServicesHeader.jpeg";
@@ -6,13 +8,24 @@ import JobsHeaderImage from "../../assets/images/ImageJobsHeader.jpg";
 import EstimateHeaderImage from "../../assets/images/ImageEstimateHeader.jpeg";
 import GalleryHeaderImage from "../../assets/images/ImageGalleryHeader.jpeg";
 
+const GenerateHomeImage = () => {
+  var i = Math.floor(Math.random() * 3 + 1);
+  if (i === 1) {
+    return HomeHeaderImage1;
+  } else if (i === 2) {
+    return HomeHeaderImage2;
+  } else if (i === 3) {
+    return HomeHeaderImage3;
+  }
+};
+
 const GenerateHeader = page => {
   if (page === "home") {
     return {
       titleText: "Cruz Urbina Landscapes",
       descText: "Cruzin' with excellence for over 15 years!",
-      headerImage: HomeHeaderImage1,
-      headerImageMobile: HomeHeaderImage1
+      headerImage: GenerateHomeImage(),
+      headerImageMobile: GenerateHomeImage()
     };
   }
   if (page === "services") {

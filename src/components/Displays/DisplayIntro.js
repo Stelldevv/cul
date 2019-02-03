@@ -1,12 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Button, Grid, Header, Segment } from "semantic-ui-react";
+import { Grid, Header, Segment } from "semantic-ui-react";
 
 import ImageCarousel from "../Widgets/ImageCarousel";
 
 const DisplayIntro = () => {
   return (
-    <Segment style={{ padding: "8em 0em" }} vertical>
+    <Segment style={{ padding: "6em 0em" }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>
           <Grid.Column width={8}>
@@ -27,20 +26,6 @@ const DisplayIntro = () => {
           </Grid.Column>
           <Grid.Column floated="right" width={6}>
             <ImageCarousel />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column textAlign="center">
-            <Button size="huge">
-              <Link
-                to="/gallery"
-                style={{
-                  color: "black"
-                }}
-              >
-                Check out my work!
-              </Link>
-            </Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>

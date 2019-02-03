@@ -33,8 +33,8 @@ class PageHeadingMobile extends Component {
             fontSize: "1.5em",
             fontWeight: "normal",
             marginTop: "0.5em",
-            marginBottom: "1.75em",
-            paddingBottom: "2em"
+            marginBottom: "1em",
+            paddingBottom: "3em"
           }}
         >
           {GenerateHeader(this.state.page).descText}

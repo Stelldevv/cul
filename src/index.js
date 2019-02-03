@@ -5,6 +5,8 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import reduxThunk from "redux-thunk";
+import registerServiceWorker from "./registerServiceWorker";
+import { env } from "./config";
 
 import App from "./components/App";
 import reducers from "./reducers";
@@ -17,7 +19,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <App env={env} />
   </Provider>,
   document.querySelector("#root")
 );
+
+registerServiceWorker();

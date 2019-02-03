@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Button, Container, Header, Icon } from "semantic-ui-react";
+import { Button, Container, Header } from "semantic-ui-react";
 
 import GenerateHeader from "./GenerateHeader";
 
@@ -43,19 +43,33 @@ class HomePageHeading extends Component {
         <Button
           primary
           size="huge"
+          animated="fade"
           style={{
-            marginBottom: "10em"
+            marginTop: "2em",
+            marginBottom: "7em"
           }}
         >
-          <Link
-            to="/estimate"
-            style={{
-              color: "white"
-            }}
-          >
-            Get a Quote
+          <Link to="/estimate">
+            <Button.Content
+              style={{
+                color: "white"
+              }}
+              visible
+            >
+              Start your estimate!
+            </Button.Content>
           </Link>
-          <Icon name="right arrow" />
+
+          <Link to="/estimate">
+            <Button.Content
+              style={{
+                color: "white"
+              }}
+              hidden
+            >
+              Yeah! So much fun!
+            </Button.Content>
+          </Link>
         </Button>
       </Container>
     );

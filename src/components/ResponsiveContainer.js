@@ -28,6 +28,14 @@ const getWidth = () => {
   return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth;
 };
 
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 8);
+  }
+};
+
 class DesktopContainer extends Component {
   state = { page: "home" };
 
@@ -74,14 +82,20 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item>
-                  <Link to="/">Home</Link>
+                  <Link to="/" onClick={scrollToTop}>
+                    Home
+                  </Link>
                 </Menu.Item>
                 <NavBarDrop />
                 <Menu.Item>
-                  <Link to="/about">About</Link>
+                  <Link to="/about" onClick={scrollToTop}>
+                    About
+                  </Link>
                 </Menu.Item>
                 <Menu.Item position="right">
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact" onClick={scrollToTop}>
+                    Contact
+                  </Link>
                 </Menu.Item>
                 <Menu.Item>
                   <Button
@@ -91,6 +105,7 @@ class DesktopContainer extends Component {
                   >
                     <Link
                       to="/estimate"
+                      onClick={scrollToTop}
                       style={{
                         color: "white"
                       }}
@@ -219,11 +234,7 @@ MobileContainer.propTypes = {
 
 const ResponsiveContainer = ({ children }) =>
   <div>
-    <ScrollUpButton
-      EasingType="easeInOutBack"
-      ShowAtPosition={700}
-      AnimationDuration={1500}
-    />
+    <ScrollUpButton ShowAtPosition={700} AnimationDuration={1500} />
     <DesktopContainer>
       {children}
     </DesktopContainer>

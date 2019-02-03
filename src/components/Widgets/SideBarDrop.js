@@ -6,7 +6,7 @@ class SideBarDrop extends Component {
   state = {};
   render() {
     return (
-      <Menu.Item inverted>
+      <Menu.Item>
         <Dropdown text="Services" pointing="up">
           <Dropdown.Menu>
             <Dropdown.Item>

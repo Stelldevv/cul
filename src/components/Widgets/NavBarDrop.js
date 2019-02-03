@@ -4,7 +4,6 @@ import { Dropdown, Menu } from "semantic-ui-react";
 
 const NavBarDrop = () =>
   <Menu.Item
-    inverted
     style={{
       display: "flex",
       alignItems: "center",
@@ -13,7 +12,7 @@ const NavBarDrop = () =>
       margin: "0em 0.5em"
     }}
   >
-    <Dropdown text="Services" pointing="down">
+    <Dropdown text="Services" pointing="up">
       <Dropdown.Menu>
         <Dropdown.Item>
           <Link

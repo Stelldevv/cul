@@ -31,7 +31,7 @@ const DisplayContact = () => {
           <Grid.Column width={8}>
             <Header as="h3" textAlign="center">
               <a
-                href="tel:+1-xxx-xxx-xxxx"
+                href="tel:+1-503-375-6341"
                 style={{
                   marginTop: "1em",
                   backgroundColor: "#0033cc",
@@ -40,7 +40,7 @@ const DisplayContact = () => {
                   padding: "1em"
                 }}
               >
-                (123) 456-7890
+                (503) 375-6341
               </a>
             </Header>
           </Grid.Column>
