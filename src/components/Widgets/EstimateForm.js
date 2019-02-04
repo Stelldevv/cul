@@ -231,7 +231,7 @@ export default class EstimateForm extends Component {
 
   sendEstimate(templateId, senderEmail, receiverEmail, estimate) {
     window.emailjs
-      .send("mailgun_stelldevel_com", templateId, {
+      .send("mailgun_cul_test", templateId, {
         senderEmail,
         receiverEmail,
         estimate
