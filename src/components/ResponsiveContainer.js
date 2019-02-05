@@ -61,7 +61,7 @@ class DesktopContainer extends Component {
             style={{
               maxHeight: "900px",
               padding: "0em 0em",
-              background: "url(" + headerImage + ") no-repeat center center",
+              backgroundImage: "url(" + headerImage + ")",
               WebkitBackgroundSize: "cover",
               MozBackgroundSize: "cover",
               OBackgroundSize: "cover",
@@ -139,8 +139,7 @@ class MobileContainer extends Component {
   render() {
     const { children } = this.props;
     const { sidebarOpened } = this.state;
-    const { headerImageMobile } = GenerateHeader(this.state.page);
-
+    const { headerImageMobile } = GenerateHeader(this.state.page, "mobile");
     return (
       <Responsive
         as={Sidebar.Pushable}
@@ -185,8 +184,7 @@ class MobileContainer extends Component {
             style={{
               maxHeight: 500,
               padding: "0em",
-              background:
-                "url(" + headerImageMobile + ") no-repeat center center",
+              backgroundImage: "url(" + headerImageMobile + ")",
               WebkitBackgroundSize: "cover",
               MozBackgroundSize: "cover",
               OBackgroundSize: "cover",

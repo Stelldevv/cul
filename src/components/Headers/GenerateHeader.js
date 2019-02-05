@@ -7,6 +7,7 @@ import ServicesHeaderImage from "../../assets/images/ImageServicesHeader.jpeg";
 import JobsHeaderImage from "../../assets/images/ImageJobsHeader.jpg";
 import EstimateHeaderImage from "../../assets/images/ImageEstimateHeader.jpeg";
 import GalleryHeaderImage from "../../assets/images/ImageGalleryHeader.jpeg";
+import FAQHeaderImage from "../../assets/images/testpicWide2.jpeg";
 
 const GenerateHomeImage = () => {
   var i = Math.floor(Math.random() * 3 + 1);
@@ -19,13 +20,17 @@ const GenerateHomeImage = () => {
   }
 };
 
-const GenerateHeader = page => {
+const GenerateHomeImageMobile = () => {
+  return HomeHeaderImage1;
+};
+
+const GenerateHeader = (page, mobile) => {
   if (page === "home") {
     return {
       titleText: "Cruz Urbina Landscapes",
       descText: "Cruzin' with excellence for over 15 years!",
       headerImage: GenerateHomeImage(),
-      headerImageMobile: GenerateHomeImage()
+      headerImageMobile: GenerateHomeImageMobile()
     };
   }
   if (page === "services") {
@@ -73,6 +78,13 @@ const GenerateHeader = page => {
       descText: "So you wanna work with us, huh?",
       headerImage: JobsHeaderImage,
       headerImageMobile: JobsHeaderImage
+    };
+  }
+  if (page === "faq") {
+    return {
+      titleText: "Frequently Asked Questions",
+      headerImage: FAQHeaderImage,
+      headerImageMobile: FAQHeaderImage
     };
   } else {
     return "Data not found";

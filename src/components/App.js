@@ -14,6 +14,8 @@ import DisplayGallery from "./Displays/DisplayGallery";
 import DisplayServices from "./Displays/DisplayServices";
 import DisplayJobs from "./Displays/DisplayJobs";
 import DisplayContact from "./Displays/DisplayContact";
+import DisplayFAQ from "./Displays/DisplayFAQ";
+import Page404 from "./Displays/Display404";
 import Footer from "./Footer.js";
 
 const browserHistory = createBrowserHistory();
@@ -40,12 +42,20 @@ class App extends React.Component {
   render() {
     return (
       <Router history={browserHistory}>
-        <Switch>
-          <ResponsiveContainer>
-            <Route path="/" exact component={DisplayIntro} />
-            <Route path="/" exact component={DisplayReviews} />
-            <Route path="/" exact component={DisplayReviews2} />
-            <Route path="/" exact component={DisplayDescriptive} />
+        <ResponsiveContainer>
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={routeProps =>
+                <React.Fragment>
+                  <DisplayIntro {...routeProps} />
+                  <DisplayReviews {...routeProps} />
+                  <DisplayReviews2 {...routeProps} />
+                  <DisplayDescriptive {...routeProps} />
+                </React.Fragment>}
+            />
+
             <Route path="/about" exact component={DisplayAbout} />
             <Route path="/gallery" exact component={DisplayGallery} />
             <Route path="/services" exact component={DisplayServices} />
@@ -62,9 +72,11 @@ class App extends React.Component {
             />
             <Route path="/jobs" exact component={DisplayJobs} />
             <Route path="/contact" exact component={DisplayContact} />
-            <Route path="/" component={Footer} />
-          </ResponsiveContainer>
-        </Switch>
+            <Route path="/FAQ" exact component={DisplayFAQ} />
+            <Route component={Page404} />
+          </Switch>
+          <Route path="/" component={Footer} />
+        </ResponsiveContainer>
       </Router>
     );
   }

@@ -34,7 +34,7 @@ class PageHeading extends Component {
             fontWeight: "normal",
             marginTop: "1.5em",
             marginBottom: "1em",
-            padding: "0 0 3em 0"
+            padding: "0 0 7em 0"
           }}
         >
           {GenerateHeader(this.state.page).descText}

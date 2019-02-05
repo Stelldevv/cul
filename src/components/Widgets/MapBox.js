@@ -5,8 +5,7 @@ import Radium from "radium";
 
 import mapMarker from "../../assets/images/mapMarker.png";
 
-mapboxgl.accessToken =
-  "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w";
+mapboxgl.accessToken = "{DISABLED FOR DEVELOPMENT PURPOSES}";
 //Enable with "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w"
 
 class ServiceMap extends React.Component {
@@ -22,7 +21,7 @@ class ServiceMap extends React.Component {
   componentDidMount() {
     var map = new mapboxgl.Map({
       container: "map",
-      style: "mapbox://styles/stelldev/cjrh3uy7a06gy2trqekgxb3oa",
+      style: "mapbox://styles/stelldev/cjrqvo9g0405b2spbz8hgv4y1",
       center: [-123.0707, 44.949],
       zoom: 5.5,
       bearing: 0,

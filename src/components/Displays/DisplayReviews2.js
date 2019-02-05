@@ -4,7 +4,7 @@ import { Container, Grid, Header, Rating, Segment } from "semantic-ui-react";
 import ReviewCarousel from "../Widgets/ReviewCarousel";
 import EstimateButton from "../Widgets/EstimateButton";
 
-const DisplayReviews = () => {
+const DisplayReviews2 = () => {
   return (
     <Container>
       <Segment style={{ padding: "0em", marginBottom: "1em" }} vertical>
@@ -36,4 +36,4 @@ const DisplayReviews = () => {
   );
 };
 
-export default DisplayReviews;
+export default DisplayReviews2;

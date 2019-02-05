@@ -80,6 +80,16 @@ class PageRoutingMobile extends Component {
               setPage={this.props.setPage}
             />}
         />
+        <Route
+          path="/faq"
+          exact
+          render={routeProps =>
+            <PageHeadingMobile
+              {...routeProps}
+              page="faq"
+              setPage={this.props.setPage}
+            />}
+        />
       </React.Fragment>
     );
   }
