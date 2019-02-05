@@ -5,7 +5,8 @@ import Radium from "radium";
 
 import mapMarker from "../../assets/images/mapMarker.png";
 
-mapboxgl.accessToken = "{DISABLED FOR DEVELOPMENT PURPOSES}";
+mapboxgl.accessToken =
+  "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w";
 //Enable with "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w"
 
 class ServiceMap extends React.Component {
