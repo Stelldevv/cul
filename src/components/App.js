@@ -6,8 +6,6 @@ import PropTypes from "prop-types";
 import ResponsiveContainer from "./ResponsiveContainer";
 import DisplayIntro from "./Displays/DisplayIntro";
 import DisplayReviews from "./Displays/DisplayReviews";
-import DisplayReviews2 from "./Displays/DisplayReviews2";
-import DisplayDescriptive from "./Displays/DisplayDescriptive";
 import DisplayAbout from "./Displays/DisplayAbout";
 import DisplayEstimate from "./Displays/DisplayEstimate";
 import DisplayGallery from "./Displays/DisplayGallery";
@@ -16,6 +14,8 @@ import DisplayJobs from "./Displays/DisplayJobs";
 import DisplayContact from "./Displays/DisplayContact";
 import DisplayFAQ from "./Displays/DisplayFAQ";
 import Page404 from "./Displays/Display404";
+
+import ServiceWindows from "./Widgets/ItemGrid";
 import Footer from "./Footer.js";
 
 const browserHistory = createBrowserHistory();
@@ -51,8 +51,7 @@ class App extends React.Component {
                 <React.Fragment>
                   <DisplayIntro {...routeProps} />
                   <DisplayReviews {...routeProps} />
-                  <DisplayReviews2 {...routeProps} />
-                  <DisplayDescriptive {...routeProps} />
+                  <ServiceWindows text={"Our Services.."} {...routeProps} />
                 </React.Fragment>}
             />
 

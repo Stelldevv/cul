@@ -10,18 +10,20 @@ const DisplayIntro = () => {
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              Landscaping and Construction is my specialty.
+              My name is Cruz, and I'm a seasoned landscaping expert..
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              I can drift a mean skid steer. I'll have your home looking great
-              in no time! I can build anything. I love crown moulding!
+              ..with over 10 years of industry experience. I've taken the time
+              to build the expertise necessary to mold difficult projects into
+              the kind of excellent results that you'll be proud to show off.
             </p>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              I do plants, too!
+              While my company specializes in sod, drainage system, and
+              sprinkler installation..
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              I pick the best hibiscus. Believe me. Nobody in Salem picks
-              hibiscus like I do. We have the best hibiscus, don't we folks?
+              ..believe me when I say that we're equipped with the knowledge and
+              tools required to get any job done - the right way!
             </p>
           </Grid.Column>
           <Grid.Column floated="right" width={6}>

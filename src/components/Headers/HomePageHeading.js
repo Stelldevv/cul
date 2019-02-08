@@ -21,7 +21,7 @@ class HomePageHeading extends Component {
             fontSize: "4em",
             marginBottom: 0,
             marginTop: "3em",
-            color: "#262626",
+            color: "white",
             fontWeight: "bold"
           }}
         >
@@ -34,7 +34,7 @@ class HomePageHeading extends Component {
             fontSize: "1.7em",
             marginTop: "1.5em",
             marginBottom: "1.5em",
-            color: "#262626",
+            color: "white",
             fontWeight: "bold"
           }}
         >

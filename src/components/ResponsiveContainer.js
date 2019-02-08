@@ -17,8 +17,6 @@ import {
 
 import GenerateHeader from "./Headers/GenerateHeader";
 
-import NavBarDrop from "./Widgets/NavBarDrop";
-import SideBarDrop from "./Widgets/SideBarDrop";
 import PageRouting from "./Routing/PageRouting";
 import PageRoutingMobile from "./Routing/PageRoutingMobile";
 
@@ -50,22 +48,21 @@ class DesktopContainer extends Component {
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-        <Visibility
-          once={false}
-          onBottomPassed={this.showFixedMenu}
-          onBottomPassedReverse={this.hideFixedMenu}
-        >
+        <Visibility once={false}>
+          <div />
           <Segment
             inverted
             textAlign="center"
             style={{
-              maxHeight: "900px",
+              minHeight: "700px",
               padding: "0em 0em",
               backgroundImage: "url(" + headerImage + ")",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center center",
               WebkitBackgroundSize: "cover",
               MozBackgroundSize: "cover",
               OBackgroundSize: "cover",
-              backgroundSize: "cover"
+              backgroundSize: "100% 100%"
             }}
             vertical
           >
@@ -86,7 +83,11 @@ class DesktopContainer extends Component {
                     Home
                   </Link>
                 </Menu.Item>
-                <NavBarDrop />
+                <Menu.Item>
+                  <Link to="/services" onClick={scrollToTop}>
+                    Services
+                  </Link>
+                </Menu.Item>
                 <Menu.Item>
                   <Link to="/about" onClick={scrollToTop}>
                     About
@@ -159,7 +160,11 @@ class MobileContainer extends Component {
               Home
             </Link>
           </Menu.Item>
-          <SideBarDrop handleSidebarHide={this.handleSidebarHide} />
+          <Menu.Item>
+            <Link to="/services" onClick={this.handleSidebarHide}>
+              Services
+            </Link>
+          </Menu.Item>
           <Menu.Item>
             <Link to="/about" onClick={this.handleSidebarHide}>
               About
@@ -182,7 +187,7 @@ class MobileContainer extends Component {
             inverted
             textAlign="center"
             style={{
-              maxHeight: 500,
+              minHeight: "400px",
               padding: "0em",
               backgroundImage: "url(" + headerImageMobile + ")",
               WebkitBackgroundSize: "cover",
@@ -218,7 +223,6 @@ class MobileContainer extends Component {
             </div>
             <PageRoutingMobile setPage={this.setPage} />
           </Segment>
-
           {children}
         </Sidebar.Pusher>
       </Responsive>

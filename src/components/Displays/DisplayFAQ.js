@@ -40,7 +40,8 @@ const DisplayFAQ = () =>
               Describe a recent project you are fond of. How long did it take?
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              Six foot deep water feature with paved patio. It took one month.
+              Six foot deep water feature with paved patio. It took one week. I
+              also enjoy working on vineyards!
             </p>
             <Divider />
             <Header as="h2">

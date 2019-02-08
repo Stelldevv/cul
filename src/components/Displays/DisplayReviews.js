@@ -1,28 +1,30 @@
 import React from "react";
-import { Grid, Header, Segment, Image } from "semantic-ui-react";
+import { Grid, Header, Rating, Segment } from "semantic-ui-react";
+
+import ReviewCarousel from "../Widgets/ReviewCarousel";
 
 const DisplayReviews = () => {
   return (
-    <Segment style={{ padding: "0em" }} vertical>
+    <Segment style={{ padding: "0em", marginBottom: "1em" }} vertical>
       <Grid celled="internally" columns="equal" stackable>
         <Grid.Row textAlign="center">
-          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
+          <Grid.Column
+            width={5}
+            style={{
+              padding: "7em 1em"
+            }}
+          >
             <Header as="h3" style={{ fontSize: "2em" }}>
-              "Hell of a Landscaper!"
+              4.7/5.0
+              <br />
+              <Rating icon="star" defaultRating={5} maxRating={5} disabled />
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              <b>Salem Times</b> Newspaper
+              20 reviews<br /> <b>Thumbtack.com</b>
             </p>
           </Grid.Column>
-          <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-            <Header as="h3" style={{ fontSize: "2em" }}>
-              "Sometimes it rains, but we have a roof now <br />
-              thanks to Cruz Urbina Landscapes."
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              <Image avatar src="https://i.imgur.com/0UjJ7o2.gif" />
-              <b>Tom</b> Father of eight on "60-Minutes"
-            </p>
+          <Grid.Column style={{ padding: "4em 8em" }}>
+            <ReviewCarousel />
           </Grid.Column>
         </Grid.Row>
       </Grid>

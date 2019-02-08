@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Header, Segment } from "semantic-ui-react";
+import { Button, Container, Grid, Header, Segment } from "semantic-ui-react";
 
 const DisplayContact = () => {
   return (
@@ -28,37 +28,38 @@ const DisplayContact = () => {
             marginTop: "3em"
           }}
         >
-          <Grid.Column width={8}>
-            <Header as="h3" textAlign="center">
-              <a
-                href="tel:+1-503-375-6341"
-                style={{
-                  marginTop: "1em",
-                  backgroundColor: "#0033cc",
-                  color: "white",
-                  width: "12em",
-                  padding: "1em"
-                }}
-              >
-                (503) 375-6341
-              </a>
-            </Header>
+          <Grid.Column
+            width={8}
+            style={{
+              textAlign: "center"
+            }}
+          >
+            <Button
+              href="tel:+1-503-375-6341"
+              style={{
+                marginTop: "1em",
+                backgroundColor: "#0033cc",
+                color: "white",
+                width: "12em",
+                padding: "1em"
+              }}
+            >
+              (503) 375-6341
+            </Button>
           </Grid.Column>
           <Grid.Column floated="right" width={8}>
-            <Header as="h3" textAlign="center">
-              <a
-                href="mailto:swoacruz@gmail.com"
-                style={{
-                  marginTop: "1em",
-                  backgroundColor: "#009933",
-                  color: "white",
-                  width: "12em",
-                  padding: "1em"
-                }}
-              >
-                swoacruz@gmail.com
-              </a>
-            </Header>
+            <Button
+              href="mailto:swoacruz@gmail.com"
+              style={{
+                marginTop: "1em",
+                backgroundColor: "#009933",
+                color: "white",
+                width: "12em",
+                padding: "1em"
+              }}
+            >
+              swoacruz@gmail.com
+            </Button>
           </Grid.Column>
         </Grid>
       </Container>

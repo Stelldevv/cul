@@ -2,7 +2,8 @@ import React from "react";
 import { Button, Grid, Header, Image, Segment } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-import placeHolder from "../../assets/images/placeholder.png";
+import aboutPic1 from "../../assets/images/gallery5.jpg";
+import aboutPic2 from "../../assets/images/gallery6.jpg";
 
 import EstimateButton from "../Widgets/EstimateButton";
 
@@ -32,18 +33,18 @@ const DisplayAbout = () =>
               assured, I will do great work for you.
             </p>
             <Image
-              src={placeHolder}
+              src={aboutPic1}
               style={{
                 margin: "5em 0"
               }}
             />
             <Header as="h2" style={{ fontSize: "3em" }}>
-              I've been operating in Salem for 15 years..
+              I've been operating in Salem for over 10 years..
             </Header>
             <p style={{ fontSize: "1.33em" }}>
               ..and that experience shows in my work. I proudly stand behind
-              every project that I do, and you can review some of those with the
-              button below!
+              every project that I do, and you can review some of those projects
+              with the button below! My license number is LCB #6881.
             </p>
             <Button
               style={{
@@ -62,7 +63,7 @@ const DisplayAbout = () =>
               </Link>
             </Button>
             <Image
-              src={placeHolder}
+              src={aboutPic2}
               style={{
                 margin: "5em 0"
               }}

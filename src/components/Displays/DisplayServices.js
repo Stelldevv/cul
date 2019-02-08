@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Segment } from "semantic-ui-react";
+import { Container, Header, Segment } from "semantic-ui-react";
 
 import ItemGrid from "../Widgets/ItemGrid";
 
@@ -9,29 +9,31 @@ class DisplayServices extends Component {
   render() {
     return (
       <Container>
-        <Segment
-          raised
-          style={{
-            margin: "1em 0.5em"
-          }}
-        >
-          <ItemGrid text={"Residential Services"} section={"residential"} />
+        <Segment padded="very" raised>
+          <Header
+            as="h2"
+            style={{
+              fontsize: "2em",
+              fontWeight: "bold",
+              display: "inline-block",
+              marginRight: "0.3em"
+            }}
+          >
+            Cruz Urbina Landscapes
+          </Header>
+          specializes in Hardscaping (Retaining walls, brickwork, etc),
+          sprinklers, and snow removal services. We're also good at a lot of
+          other stuff, and we listed the ones we could think of below. If you
+          don't see what you're looking for, just give us a call!
+          <u>We can probably make it happen.</u>
         </Segment>
         <Segment
           raised
           style={{
-            margin: "1em 0.5em"
+            margin: "5em 1em"
           }}
         >
-          <ItemGrid text={"Commercial Services"} section={"commercial"} />
-        </Segment>
-        <Segment
-          raised
-          style={{
-            margin: "1em 0.5em"
-          }}
-        >
-          <ItemGrid text={"Contracting Services"} section={"contracting"} />
+          <ItemGrid text={"Services Available"} />
         </Segment>
       </Container>
     );

@@ -47,23 +47,23 @@ class GalleryLightBox extends React.Component {
     const photos = [
       {
         src: this.props.photoPack[0],
-        width: 2,
+        width: 3,
         height: 2
       },
       {
         src: this.props.photoPack[1],
         width: 2,
-        height: 2
+        height: 3
       },
 
       {
         src: this.props.photoPack[2],
-        width: 2,
+        width: 3,
         height: 2
       },
       {
         src: this.props.photoPack[3],
-        width: 2,
+        width: 3,
         height: 2
       },
       {
@@ -73,6 +73,11 @@ class GalleryLightBox extends React.Component {
       },
       {
         src: this.props.photoPack[5],
+        width: 2,
+        height: 3
+      },
+      {
+        src: this.props.photoPack[6],
         width: 3,
         height: 2
       }

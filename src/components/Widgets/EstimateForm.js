@@ -226,12 +226,13 @@ export default class EstimateForm extends Component {
     this.setState({
       formSubmitted: true
     });
+    document.getElementById("estimateForm").reset();
     alert("Estimate received. We'll get back to you shortly!");
   }
 
   sendEstimate(templateId, senderEmail, receiverEmail, estimate) {
     window.emailjs
-      .send("mailgun_cul_test", templateId, {
+      .send("mailgun_urbina", templateId, {
         senderEmail,
         receiverEmail,
         estimate
@@ -245,9 +246,21 @@ export default class EstimateForm extends Component {
       .catch(err => console.error("Failed to send estimate. Error: ", err));
   }
 
+  //=================================================================
+  //=================================================================
+  //=================================================================
+  //=================================================================
+  //=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=v=
+  //THE GREAT FUNCTIONOUS-COMPONENTIATUS CHASM
+  //=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=^=
+  //=================================================================
+  //=================================================================
+  //=================================================================
+  //=================================================================
+
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form id="estimateForm" onSubmit={this.handleSubmit}>
         <Form.Group widths="equal">
           <Form.Field
             label="First Name"
@@ -558,6 +571,13 @@ export default class EstimateForm extends Component {
             }}
             grouped
           >
+            <Form.Field
+              label="Snowplow/De-ice"
+              value="Snowplow/De-ice"
+              onChange={this.handleChangeProjectSoftServices}
+              control="input"
+              type="checkbox"
+            />
             <Form.Field
               label="Plant Flower Beds"
               value="Plant Flower Beds"

@@ -19,7 +19,16 @@ const DisplayJobs = () => {
         </Header>
         <p style={{ fontSize: "1.33em" }}>
           If you think you have what it takes to join the team, then give us a
-          call.
+          call. <br />{" "}
+          <p
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "1em"
+            }}
+          >
+            Yeah. It's that simple.
+          </p>
         </p>
         <Header
           as="h3"
