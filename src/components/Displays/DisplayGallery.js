@@ -29,39 +29,12 @@ const DisplayGallery = () =>
   >
     <Segment
       style={{
-        margin: "2em 0",
         width: "80%",
         paddingBottom: "4em",
         margin: "0 auto"
       }}
       raised
     >
-      <Segment
-        padded="very"
-        style={{
-          backgroundColor: "#9dcad2",
-          border: "1px solid #3b95a6",
-          margin: "0 auto",
-          marginBottom: "2em",
-          width: "75%"
-        }}
-        textAlign="center"
-      >
-        <Header
-          as="h2"
-          style={{
-            fontsize: "2em",
-            fontWeight: "bold",
-            display: "block",
-            marginRight: "0.3em",
-            marginBottom: "1em"
-          }}
-        >
-          *Under Renovation*<br />
-        </Header>
-        Please excuse the crude nature of the gallery. Work is underway to
-        "webscape" it into shape. (2/7/2019)
-      </Segment>
       <Header
         as="h3"
         textAlign="center"
