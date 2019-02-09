@@ -63,7 +63,7 @@ class HomePageHeading extends Component {
               }}
               hidden
             >
-              Yeah! So much fun!
+              Oh Yeah!
             </Button.Content>
           </Button>
         </Link>
