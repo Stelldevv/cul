@@ -167,8 +167,8 @@ class ServiceMap extends React.Component {
         position: "absolute",
         bottom: "0",
         right: "0",
-        width: "16em",
-        height: "16em",
+        width: "18em",
+        height: "18em",
         margin: "1.5em 6em 1.5em 1.5em"
       },
       "@media only screen and (max-width: 767px)": {
