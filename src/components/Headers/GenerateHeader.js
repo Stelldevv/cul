@@ -25,28 +25,60 @@ import GalleryHeaderImageMobile from "../../assets/images/headerGalleryMobile.jp
 import FAQHeaderImageMobile from "../../assets/images/headerFAQMobile.jpg";
 
 const GenerateHomeImage = () => {
-  var i = Math.floor(Math.random() * 5 + 1);
-  if (i === 1 || i === 2) {
-    return HomeHeaderImage1;
-  } else if (i === 3) {
-    return HomeHeaderImage2;
-  } else if (i === 4) {
-    return HomeHeaderImage3;
-  } else if (i === 5) {
-    return HomeHeaderImage4;
+  var month = new Date().getMonth();
+  //shows snowplowing picture 60% of the time from November to March.
+  if (month < 3 || month > 9) {
+    var a = Math.floor(Math.random() * 8 + 1);
+    if (a > 0 && a < 6) {
+      return HomeHeaderImage1;
+    } else if (a === 6) {
+      return HomeHeaderImage2;
+    } else if (a === 7) {
+      return HomeHeaderImage3;
+    } else if (a === 8) {
+      return HomeHeaderImage4;
+    }
+    //otherwise, equal shares
+  } else {
+    var b = Math.floor(Math.random() * 4 + 1);
+    if (b === 1) {
+      return HomeHeaderImage1;
+    } else if (b === 2) {
+      return HomeHeaderImage2;
+    } else if (b === 3) {
+      return HomeHeaderImage3;
+    } else if (b === 4) {
+      return HomeHeaderImage4;
+    }
   }
 };
 
 const GenerateHomeImageMobile = () => {
-  var i = Math.floor(Math.random() * 5 + 1);
-  if (i === 1 || i === 2) {
-    return HomeHeaderImage1Mobile;
-  } else if (i === 3) {
-    return HomeHeaderImage2Mobile;
-  } else if (i === 4) {
-    return HomeHeaderImage3Mobile;
-  } else if (i === 5) {
-    return HomeHeaderImage4Mobile;
+  var month = new Date().getMonth();
+  //shows snowplowing picture 60% of the time from November to March.
+  if (month < 3 || month > 9) {
+    var a = Math.floor(Math.random() * 8 + 1);
+    if (a > 0 && a < 6) {
+      return HomeHeaderImage1Mobile;
+    } else if (a === 6) {
+      return HomeHeaderImage2Mobile;
+    } else if (a === 7) {
+      return HomeHeaderImage3Mobile;
+    } else if (a === 8) {
+      return HomeHeaderImage4Mobile;
+    }
+    //otherwise, equal shares
+  } else {
+    var b = Math.floor(Math.random() * 4 + 1);
+    if (b === 1) {
+      return HomeHeaderImage1Mobile;
+    } else if (b === 2) {
+      return HomeHeaderImage2Mobile;
+    } else if (b === 3) {
+      return HomeHeaderImage3Mobile;
+    } else if (b === 4) {
+      return HomeHeaderImage4Mobile;
+    }
   }
 };
 

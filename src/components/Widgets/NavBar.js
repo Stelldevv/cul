@@ -59,7 +59,7 @@ class NavBar extends React.Component {
                 color: "white"
               }}
             >
-              <Button inverted primary as="a" style={{ marginLeft: "0.5em" }}>
+              <Button inverted primary style={{ marginLeft: "0.5em" }}>
                 Free Estimate!
               </Button>
             </Link>

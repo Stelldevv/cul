@@ -35,8 +35,7 @@ class PageHeading extends Component {
             fontWeight: "normal",
             marginTop: "1.5em",
             marginBottom: "1em",
-            padding: "0 0 7em 0",
-            color: "#99b3ff"
+            padding: "0 0 7em 0"
           }}
         >
           {pageProps.descText}
