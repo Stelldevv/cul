@@ -34,22 +34,22 @@ class HomePageHeading extends Component {
             fontSize: "1.7em",
             marginTop: "1.5em",
             marginBottom: "1.5em",
-            color: "white",
+            color: "#99b3ff",
             fontWeight: "bold"
           }}
         >
           {GenerateHeader(this.state.page).descText}
         </Header>
-        <Button
-          primary
-          size="huge"
-          animated="fade"
-          style={{
-            marginTop: "2em",
-            marginBottom: "7em"
-          }}
-        >
-          <Link to="/estimate">
+        <Link to="/estimate">
+          <Button
+            primary
+            size="huge"
+            animated="fade"
+            style={{
+              marginTop: "2em",
+              marginBottom: "7em"
+            }}
+          >
             <Button.Content
               style={{
                 color: "white"
@@ -58,9 +58,6 @@ class HomePageHeading extends Component {
             >
               Start your estimate!
             </Button.Content>
-          </Link>
-
-          <Link to="/estimate">
             <Button.Content
               style={{
                 color: "white"
@@ -69,8 +66,8 @@ class HomePageHeading extends Component {
             >
               Yeah! So much fun!
             </Button.Content>
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </Container>
     );
   }

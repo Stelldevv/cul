@@ -21,7 +21,7 @@ class HomePageHeadingMobile extends Component {
             fontSize: "2em",
             fontWeight: "normal",
             marginBottom: 0,
-            marginTop: "2em"
+            marginTop: "2.3em"
           }}
         >
           {GenerateHeader(this.state.page).titleText}
@@ -30,23 +30,23 @@ class HomePageHeadingMobile extends Component {
           as="h2"
           inverted
           style={{
-            fontSize: "1.5em",
+            fontSize: "1.3em",
             fontWeight: "normal",
             marginTop: "0.5em"
           }}
         >
           {GenerateHeader(this.state.page).descText}
         </Header>
-        <Button
-          primary
-          size="medium"
-          animated="fade"
-          style={{
-            marginTop: "2em",
-            marginBottom: "4em"
-          }}
-        >
-          <Link to="/estimate">
+        <Link to="/estimate">
+          <Button
+            primary
+            size="medium"
+            animated="fade"
+            style={{
+              marginTop: "2em",
+              marginBottom: "4em"
+            }}
+          >
             <Button.Content
               style={{
                 color: "white"
@@ -55,9 +55,6 @@ class HomePageHeadingMobile extends Component {
             >
               Start your estimate!
             </Button.Content>
-          </Link>
-
-          <Link to="/estimate">
             <Button.Content
               style={{
                 color: "white"
@@ -66,8 +63,8 @@ class HomePageHeadingMobile extends Component {
             >
               Yeah! So much fun!
             </Button.Content>
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </Container>
     );
   }

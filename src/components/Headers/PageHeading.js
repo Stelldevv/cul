@@ -12,6 +12,7 @@ class PageHeading extends Component {
   }
 
   render() {
+    var pageProps = GenerateHeader(this.state.page);
     return (
       <Container text>
         <Header
@@ -21,10 +22,10 @@ class PageHeading extends Component {
             fontSize: "3.5em",
             fontWeight: "normal",
             marginBottom: 0,
-            marginTop: "3em"
+            marginTop: "4em"
           }}
         >
-          {GenerateHeader(this.state.page).titleText}
+          {pageProps.titleText}
         </Header>
         <Header
           as="h2"
@@ -34,10 +35,11 @@ class PageHeading extends Component {
             fontWeight: "normal",
             marginTop: "1.5em",
             marginBottom: "1em",
-            padding: "0 0 7em 0"
+            padding: "0 0 7em 0",
+            color: "#99b3ff"
           }}
         >
-          {GenerateHeader(this.state.page).descText}
+          {pageProps.descText}
         </Header>
       </Container>
     );

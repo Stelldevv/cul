@@ -2,11 +2,8 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import ScrollUpButton from "react-scroll-up-button";
-
 import {
   Button,
-  Container,
   Icon,
   Menu,
   Responsive,
@@ -16,9 +13,10 @@ import {
 } from "semantic-ui-react";
 
 import GenerateHeader from "./Headers/GenerateHeader";
-
 import PageRouting from "./Routing/PageRouting";
 import PageRoutingMobile from "./Routing/PageRoutingMobile";
+import ScrollUpButton from "react-scroll-up-button";
+import NavBar from "./Widgets/NavBar";
 
 const getWidth = () => {
   const isSSR = typeof window === "undefined";
@@ -71,51 +69,11 @@ class DesktopContainer extends Component {
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
-              size="large"
               style={{
-                backgroundColor: "#262626",
-                padding: "0.5em 0em"
+                backgroundColor: "#262626"
               }}
             >
-              <Container>
-                <Menu.Item>
-                  <Link to="/" onClick={scrollToTop}>
-                    Home
-                  </Link>
-                </Menu.Item>
-                <Menu.Item>
-                  <Link to="/services" onClick={scrollToTop}>
-                    Services
-                  </Link>
-                </Menu.Item>
-                <Menu.Item>
-                  <Link to="/about" onClick={scrollToTop}>
-                    About
-                  </Link>
-                </Menu.Item>
-                <Menu.Item position="right">
-                  <Link to="/contact" onClick={scrollToTop}>
-                    Contact
-                  </Link>
-                </Menu.Item>
-                <Menu.Item>
-                  <Button
-                    inverted={!fixed}
-                    primary={fixed}
-                    style={{ marginLeft: "0.5em" }}
-                  >
-                    <Link
-                      to="/estimate"
-                      onClick={scrollToTop}
-                      style={{
-                        color: "white"
-                      }}
-                    >
-                      Free Estimate!
-                    </Link>
-                  </Button>
-                </Menu.Item>
-              </Container>
+              <NavBar />
             </Menu>
             <PageRouting setPage={this.setPage} />
           </Segment>

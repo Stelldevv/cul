@@ -21,7 +21,7 @@ class PageHeadingMobile extends Component {
             fontSize: "2em",
             fontWeight: "normal",
             marginBottom: 0,
-            marginTop: "1.5em"
+            marginTop: "3.5em"
           }}
         >
           {GenerateHeader(this.state.page).titleText}
@@ -30,7 +30,7 @@ class PageHeadingMobile extends Component {
           as="h2"
           inverted
           style={{
-            fontSize: "1.5em",
+            fontSize: "1.3em",
             fontWeight: "normal",
             marginTop: "0.5em",
             marginBottom: "1em",

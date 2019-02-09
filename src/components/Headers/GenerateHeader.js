@@ -25,27 +25,27 @@ import GalleryHeaderImageMobile from "../../assets/images/headerGalleryMobile.jp
 import FAQHeaderImageMobile from "../../assets/images/headerFAQMobile.jpg";
 
 const GenerateHomeImage = () => {
-  var i = Math.floor(Math.random() * 4 + 1);
-  if (i === 1) {
+  var i = Math.floor(Math.random() * 5 + 1);
+  if (i === 1 || i === 2) {
     return HomeHeaderImage1;
-  } else if (i === 2) {
-    return HomeHeaderImage2;
   } else if (i === 3) {
-    return HomeHeaderImage3;
+    return HomeHeaderImage2;
   } else if (i === 4) {
+    return HomeHeaderImage3;
+  } else if (i === 5) {
     return HomeHeaderImage4;
   }
 };
 
 const GenerateHomeImageMobile = () => {
-  var i = Math.floor(Math.random() * 4 + 1);
-  if (i === 1) {
+  var i = Math.floor(Math.random() * 5 + 1);
+  if (i === 1 || i === 2) {
     return HomeHeaderImage1Mobile;
-  } else if (i === 2) {
-    return HomeHeaderImage2Mobile;
   } else if (i === 3) {
-    return HomeHeaderImage3Mobile;
+    return HomeHeaderImage2Mobile;
   } else if (i === 4) {
+    return HomeHeaderImage3Mobile;
+  } else if (i === 5) {
     return HomeHeaderImage4Mobile;
   }
 };
@@ -53,18 +53,18 @@ const GenerateHomeImageMobile = () => {
 const GenerateServiceImage = () => {
   var i = Math.floor(Math.random() * 2 + 1);
   if (i === 1) {
-    return ServicesHeaderImageMobile;
+    return ServicesHeaderImage;
   } else if (i === 2) {
-    return ServicesHeaderImage2Mobile;
+    return ServicesHeaderImage2;
   }
 };
 
 const GenerateServiceImageMobile = () => {
   var i = Math.floor(Math.random() * 2 + 1);
   if (i === 1) {
-    return ServicesHeaderImage;
+    return ServicesHeaderImageMobile;
   } else if (i === 2) {
-    return ServicesHeaderImage2;
+    return ServicesHeaderImage2Mobile;
   }
 };
 
@@ -76,7 +76,7 @@ const GenerateHeader = page => {
   if (page === "home") {
     return {
       titleText: "Cruz Urbina Landscapes",
-      descText: "Serving Salem for over 10 years!",
+      descText: "Serving Salem for over 35 years!",
       headerImage: GenerateHomeImage(),
       headerImageMobile: GenerateHomeImageMobile()
     };
@@ -84,7 +84,7 @@ const GenerateHeader = page => {
   if (page === "services") {
     return {
       titleText: "Landscaping Services",
-      descText: "We've got you covered.",
+      descText: "We do the job at a reasonable price.",
       headerImage: GenerateServiceImage(),
       headerImageMobile: GenerateServiceImageMobile()
     };

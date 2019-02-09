@@ -13,13 +13,13 @@ const DisplayIntro = () => {
               My name is Cruz, and I'm a seasoned landscaping expert..
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              ..with over 10 years of industry experience. I've taken the time
+              ..with over 35 years of industry experience. I've taken the time
               to build the expertise necessary to mold difficult projects into
               the kind of excellent results that you'll be proud to show off.
             </p>
             <Header as="h3" style={{ fontSize: "2em" }}>
-              While my company specializes in sod, drainage system, and
-              sprinkler installation..
+              While my company specializes in snowplowing, sod, drainage
+              systems, and sprinkler installation..
             </Header>
             <p style={{ fontSize: "1.33em" }}>
               ..believe me when I say that we're equipped with the knowledge and

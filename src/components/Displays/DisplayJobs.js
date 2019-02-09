@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header, Segment } from "semantic-ui-react";
+import { Button, Container, Header, Segment } from "semantic-ui-react";
 
 const DisplayJobs = () => {
   return (
@@ -17,10 +17,10 @@ const DisplayJobs = () => {
         >
           Ready to get your hands dirty?
         </Header>
-        <p style={{ fontSize: "1.33em" }}>
+        <div style={{ fontSize: "1.33em" }}>
           If you think you have what it takes to join the team, then give us a
-          call. <br />{" "}
-          <p
+          call. <br />
+          <div
             style={{
               display: "flex",
               justifyContent: "center",
@@ -28,8 +28,8 @@ const DisplayJobs = () => {
             }}
           >
             Yeah. It's that simple.
-          </p>
-        </p>
+          </div>
+        </div>
         <Header
           as="h3"
           textAlign="center"
@@ -38,18 +38,14 @@ const DisplayJobs = () => {
             justifyContent: "center"
           }}
         >
-          <a
+          <Button
             href="tel:+1-503-375-6341"
             style={{
-              marginTop: "1em",
-              backgroundColor: "teal",
-              color: "white",
-              width: "12em",
-              padding: "1em"
+              marginTop: "1em"
             }}
           >
             (503) 375-6341
-          </a>
+          </Button>
         </Header>
       </Container>
     </Segment>

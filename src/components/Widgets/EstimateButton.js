@@ -12,18 +12,18 @@ const scrollToTop = () => {
 
 const EstimateButton = () =>
   <Container textAlign="center">
-    <Button
-      animated="fade"
-      size="huge"
-      style={{
-        marginTop: "3em"
-      }}
-    >
-      <Link to="/estimate" onClick={scrollToTop}>
-        <Button.Content visible>Start your Estimate today!</Button.Content>
-        <Button.Content hidden>Let's do it!</Button.Content>
-      </Link>
-    </Button>
+    <Link to="/estimate" onClick={scrollToTop}>
+      <Button
+        animated="fade"
+        size="large"
+        style={{
+          marginTop: "3em"
+        }}
+      >
+        <Button.Content visible>Start your Estimate!</Button.Content>
+        <Button.Content hidden>Oh Yeah!</Button.Content>
+      </Button>
+    </Link>
   </Container>;
 
 export default EstimateButton;

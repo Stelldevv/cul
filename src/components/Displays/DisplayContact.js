@@ -25,37 +25,28 @@ const DisplayContact = () => {
         </p>
         <Grid
           style={{
-            marginTop: "3em"
+            marginTop: "1.5em"
           }}
         >
           <Grid.Column
-            width={8}
             style={{
               textAlign: "center"
             }}
           >
             <Button
+              size="medium"
               href="tel:+1-503-375-6341"
               style={{
-                marginTop: "1em",
-                backgroundColor: "#0033cc",
-                color: "white",
-                width: "12em",
-                padding: "1em"
+                margin: "1em 2em"
               }}
             >
               (503) 375-6341
             </Button>
-          </Grid.Column>
-          <Grid.Column floated="right" width={8}>
             <Button
+              size="medium"
               href="mailto:swoacruz@gmail.com"
               style={{
-                marginTop: "1em",
-                backgroundColor: "#009933",
-                color: "white",
-                width: "12em",
-                padding: "1em"
+                margin: "1em 2em"
               }}
             >
               swoacruz@gmail.com

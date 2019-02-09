@@ -9,7 +9,14 @@ class DisplayServices extends Component {
   render() {
     return (
       <Container>
-        <Segment padded="very" raised>
+        <Segment
+          padded="very"
+          raised
+          style={{
+            backgroundColor: "#99b3ff",
+            marginTop: "4em"
+          }}
+        >
           <Header
             as="h2"
             style={{
@@ -24,8 +31,8 @@ class DisplayServices extends Component {
           specializes in Hardscaping (Retaining walls, brickwork, etc),
           sprinklers, and snow removal services. We're also good at a lot of
           other stuff, and we listed the ones we could think of below. If you
-          don't see what you're looking for, just give us a call!
-          <u>We can probably make it happen.</u>
+          don't see what you're looking for, just give us a call! We can
+          probably make it happen.
         </Segment>
         <Segment
           raised

@@ -39,7 +39,7 @@ const DisplayAbout = () =>
               }}
             />
             <Header as="h2" style={{ fontSize: "3em" }}>
-              I've been operating in Salem for over 10 years..
+              I've been operating in Salem for over 35 years..
             </Header>
             <p style={{ fontSize: "1.33em" }}>
               ..and that experience shows in my work. I proudly stand behind
