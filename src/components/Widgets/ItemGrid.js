@@ -51,7 +51,7 @@ class ItemGrid extends Component {
         <Grid container>
           <Grid.Row>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -82,7 +82,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -113,7 +113,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -144,7 +144,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -175,7 +175,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -206,7 +206,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -237,7 +237,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -268,7 +268,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -299,7 +299,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -330,7 +330,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -361,7 +361,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{
@@ -392,7 +392,7 @@ class ItemGrid extends Component {
               </Reveal>
             </Grid.Column>
             <Grid.Column
-              mobile={8}
+              mobile={5}
               tablet={5}
               computer={4}
               style={{

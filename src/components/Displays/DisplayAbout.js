@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, Grid, Header, Image, Segment } from "semantic-ui-react";
+import {
+  Button,
+  Container,
+  Grid,
+  Header,
+  Image,
+  Segment
+} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import aboutPic1 from "../../assets/images/gallery5.jpg";
@@ -17,28 +24,60 @@ const scrollToTop = () => {
 
 const DisplayAbout = () =>
   <React.Fragment>
-    <Segment style={{ padding: "2em 0 5em 0" }} vertical>
-      <Grid container stackable verticalAlign="middle">
+    <Header
+      as="h2"
+      textAlign="center"
+      style={{ fontSize: "2.5em", margin: "2em 0em", color: "grey" }}
+    >
+      "In my 35 years of landscaping, I've learned something.."
+    </Header>
+
+    <Segment
+      style={{
+        background: "url(" + aboutPic1 + ") no-repeat center center fixed",
+        WebkitBackgroundSize: "cover",
+        MozBackgroundSize: "cover",
+        OBackgroundSize: "cover",
+        backgroundSize: "cover"
+      }}
+    >
+      <Container>
+        <Segment
+          style={{
+            backgroundColor: "rgba(48, 48, 48, 0.7)",
+            margin: "1.5em",
+            padding: "1em",
+            paddingTop: "3em",
+            textAlign: "center",
+            color: "white",
+            minHeight: "18em"
+          }}
+        >
+          <p
+            style={{
+              fontSize: "1.5em",
+              margin: "1em 0.5em"
+            }}
+          >
+            "..I've learned that it's my job to do a great job. That job isn't
+            done until both parties are happy with the quality of work, because
+            my reputation and livelihood depend on that quality. I know that if
+            I take care of you, then I get taken care of. In the age of
+            Google/Yelp reviews, I can't afford to be anything less than great,
+            and rest assured, I will do great work for you."
+          </p>
+        </Segment>
+      </Container>
+    </Segment>
+    <Segment>
+      <Grid>
         <Grid.Row>
-          <Grid.Column width={14}>
-            <Header as="h2" style={{ fontSize: "3em" }}>
-              When "good" isn't enough.
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              It's my job to do a great job. That job isn't done until we're
-              both happy with the quality of the work, because my reputation and
-              livelihood rely on that quality. I know that if I take care of
-              you, then I get taken care of. In the age of Google/Yelp reviews,
-              I can't afford to do anything less than the best, and rest
-              assured, I will do great work for you.
-            </p>
-            <Image
-              src={aboutPic1}
-              style={{
-                margin: "5em 0"
-              }}
-            />
-            <Header as="h2" style={{ fontSize: "3em" }}>
+          <Grid.Column
+            style={{
+              padding: "2em"
+            }}
+          >
+            <Header as="h2" textAlign="left" style={{ fontSize: "3em" }}>
               I've been operating in Salem for over 35 years..
             </Header>
             <p style={{ fontSize: "1.33em" }}>
@@ -46,28 +85,40 @@ const DisplayAbout = () =>
               every project that I do, and you can review some of those projects
               with the button below! My license number is LCB #6881.
             </p>
-            <Button
-              style={{
-                marginTop: "1em"
-              }}
-              size="huge"
-            >
-              <Link
-                to="/gallery"
-                onClick={scrollToTop}
+            <Container textAlign="center">
+              <Button
                 style={{
-                  color: "black"
+                  marginTop: "1em"
                 }}
+                size="huge"
               >
-                My Past Work
-              </Link>
-            </Button>
-            <Image
-              src={aboutPic2}
-              style={{
-                margin: "5em 0"
-              }}
-            />
+                <Link
+                  to="/gallery"
+                  onClick={scrollToTop}
+                  style={{
+                    color: "black"
+                  }}
+                >
+                  My Past Work
+                </Link>
+              </Button>
+            </Container>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+    <Segment>
+      <Image
+        src={aboutPic2}
+        style={{
+          margin: "5em 0"
+        }}
+      />
+    </Segment>
+    <Segment>
+      <Grid>
+        <Grid.Row>
+          <Grid.Column>
             <Header as="h2" style={{ fontSize: "3em", marginTop: "1em" }}>
               I'm ready when you are!
             </Header>

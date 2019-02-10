@@ -8,7 +8,12 @@ class DisplayEstimate extends React.Component {
 
   render() {
     return (
-      <Segment style={{ padding: "4em 0em" }} vertical>
+      <Segment
+        style={{
+          padding: "4em 0em"
+        }}
+        vertical
+      >
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={12}>

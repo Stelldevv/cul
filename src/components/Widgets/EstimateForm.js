@@ -56,7 +56,7 @@ export default class EstimateForm extends Component {
   handleChangeMessage = this.handleChangeMessage.bind(this);
   handleSubmit = this.handleSubmit.bind(this);
 
-  static sender = "TestBot@mailmg.stelldevel.com";
+  static sender = "RoboRepo@mg.cruzurbinalandscapes.com";
 
   handleChangeClientFirst(event) {
     this.setState({
