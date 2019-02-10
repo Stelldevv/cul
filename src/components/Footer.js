@@ -62,7 +62,7 @@ class Footer extends React.Component {
                     Call us today!
                   </Header>
                   <p>
-                    ..before someone else does. <br /> We're already swamped.
+                    (503) 375-6341 <br /> <br />We're ready for the job.
                   </p>
                 </Grid.Column>
               </Grid.Row>

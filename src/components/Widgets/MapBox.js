@@ -5,7 +5,8 @@ import Radium from "radium";
 
 import mapMarker from "../../assets/images/mapMarker.png";
 
-mapboxgl.accessToken = "{DISABLED FOR DEVELOPMENT PURPOSES}";
+mapboxgl.accessToken =
+  "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w";
 //Enable with "pk.eyJ1Ijoic3RlbGxkZXYiLCJhIjoiY2pxaGlqd2ZhMGk0bjN4b2xrcjkyODhmdyJ9.cHE5WWdCPpTg7q29Xo292w"
 
 class ServiceMap extends React.Component {
@@ -190,8 +191,8 @@ class ServiceMap extends React.Component {
         position: "absolute",
         top: "0",
         right: "0",
-        width: "16em",
-        height: "16em",
+        width: "15em",
+        height: "15em",
         margin: "7em 2em 0em 0em"
       },
       "@media only screen and (max-width: 325px)": {

@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Button,
-  Container,
-  Grid,
-  Header,
-  Image,
-  Segment
-} from "semantic-ui-react";
+import { Button, Container, Grid, Header, Segment } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import aboutPic1 from "../../assets/images/gallery5.jpg";
-import aboutPic2 from "../../assets/images/gallery6.jpg";
+//import aboutPic2 from "../../assets/images/gallery6.jpg";
 
 import EstimateButton from "../Widgets/EstimateButton";
 
@@ -73,52 +66,53 @@ const DisplayAbout = () =>
       <Grid>
         <Grid.Row>
           <Grid.Column
+            textAlign="center"
             style={{
               padding: "2em"
             }}
           >
-            <Header as="h2" textAlign="left" style={{ fontSize: "3em" }}>
+            <Header as="h2" style={{ fontSize: "3em" }}>
               I've been operating in Salem for over 35 years..
             </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              ..and that experience shows in my work. I proudly stand behind
-              every project that I do, and you can review some of those projects
-              with the button below! My license number is LCB #6881.
-            </p>
-            <Container textAlign="center">
-              <Button
-                style={{
-                  marginTop: "1em"
-                }}
-                size="huge"
-              >
-                <Link
-                  to="/gallery"
-                  onClick={scrollToTop}
-                  style={{
-                    color: "black"
-                  }}
-                >
-                  My Past Work
-                </Link>
-              </Button>
+            <Container>
+              <p style={{ fontSize: "1.33em" }}>
+                ..and that experience shows in my work. I've worked for hundreds
+                of homeowners, and I even worked on the capital!<br /> <br />I
+                proudly stand behind every project that I do, and you can review
+                some of those projects with the button below! <br /> <br />My
+                license number is LCB #6881.
+              </p>
             </Container>
+
+            <Button
+              style={{
+                marginTop: "1em"
+              }}
+              size="huge"
+            >
+              <Link
+                to="/gallery"
+                onClick={scrollToTop}
+                style={{
+                  color: "black"
+                }}
+              >
+                Some of my past work
+              </Link>
+            </Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Segment>
-    <Segment>
-      <Image
-        src={aboutPic2}
-        style={{
-          margin: "5em 0"
-        }}
-      />
-    </Segment>
-    <Segment>
+
+    <Segment
+      style={{
+        paddingBottom: "3em"
+      }}
+    >
       <Grid>
         <Grid.Row>
-          <Grid.Column>
+          <Grid.Column textAlign="center">
             <Header as="h2" style={{ fontSize: "3em", marginTop: "1em" }}>
               I'm ready when you are!
             </Header>
