@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Container, Header, Image, Segment } from "semantic-ui-react";
-import { Link } from "react-router-dom";
 
 import Pupper1 from "../../assets/images/AtLeastYouDontLookLikeABudgetEwok.jpg";
 import Pupper2 from "../../assets/images/AtLeastYouHaveASmallerForeHeadThanThisGuy.jpg";
@@ -68,10 +67,10 @@ class Display404 extends React.Component {
             }}
             onClick={scrollToTop}
           >
-            <Link to="/">
+            <a href="/">
               <Button.Content visible>Return Home</Button.Content>
               <Button.Content hidden>Bye, 404 Pupper!</Button.Content>
-            </Link>
+            </a>
           </Button>
         </Container>
       </Segment>
