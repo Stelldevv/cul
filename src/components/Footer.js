@@ -62,7 +62,8 @@ class Footer extends React.Component {
                     Call us today!
                   </Header>
                   <p>
-                    (503) 375-6341 <br /> <br />We're ready for the job.
+                    <a href="tel:+1-503-375-6341">(503) 375-6341</a> <br />{" "}
+                    <br />We're ready for the job.
                   </p>
                 </Grid.Column>
               </Grid.Row>
