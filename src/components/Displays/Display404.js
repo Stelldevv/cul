@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Container, Header, Image, Segment } from "semantic-ui-react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 import Pupper1 from "../../assets/images/AtLeastYouDontLookLikeABudgetEwok.jpg";
 import Pupper2 from "../../assets/images/AtLeastYouHaveASmallerForeHeadThanThisGuy.jpg";
@@ -59,14 +59,15 @@ class Display404 extends React.Component {
             }}
           />
           When you're ready, click the button below! <br />
-          <Link to="/">
-            <Button>
-              animated="fade" size="large" style={{
+          <Link to="/" onClick={scrollToTop}>
+            <Button
+              animated="fade"
+              size="large"
+              style={{
                 marginTop: "3em",
                 fontSize: "1em"
               }}
-              onClick={scrollToTop}
-              >
+            >
               <Button.Content visible>Return Home</Button.Content>
               <Button.Content hidden>Bye, 404 Pupper!</Button.Content>
             </Button>
