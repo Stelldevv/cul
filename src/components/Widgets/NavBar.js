@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Menu } from "semantic-ui-react";
-import Radium from "radium";
 
 const scrollToTop = () => {
   const c = document.documentElement.scrollTop || document.body.scrollTop;
@@ -69,7 +68,5 @@ class NavBar extends React.Component {
     );
   }
 }
-
-NavBar = Radium(NavBar);
 
 export default NavBar;
