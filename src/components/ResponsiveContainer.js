@@ -60,7 +60,7 @@ class DesktopContainer extends Component {
               WebkitBackgroundSize: "cover",
               MozBackgroundSize: "cover",
               OBackgroundSize: "cover",
-              backgroundSize: "100% 100%"
+              backgroundSize: "cover"
             }}
             vertical
           >
