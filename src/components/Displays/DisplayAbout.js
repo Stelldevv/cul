@@ -37,7 +37,7 @@ const DisplayAbout = () =>
       <Container>
         <Segment
           style={{
-            backgroundColor: "rgba(48, 48, 48, 0.7)",
+            backgroundColor: "rgba(48, 48, 48, 0.78)",
             margin: "1.5em",
             padding: "1em",
             paddingTop: "3em",
@@ -107,17 +107,24 @@ const DisplayAbout = () =>
 
     <Segment
       style={{
-        paddingBottom: "3em"
+        paddingBottom: "3em",
+        backgroundColor: "#ffffe6"
       }}
     >
       <Grid>
         <Grid.Row>
           <Grid.Column textAlign="center">
-            <Header as="h2" style={{ fontSize: "3em", marginTop: "1em" }}>
+            <Header
+              as="h2"
+              style={{
+                fontSize: "3em",
+                marginTop: "1em"
+              }}
+            >
               I'm ready when you are!
             </Header>
             <p style={{ fontSize: "1.33em" }}>
-              What do you say? Let's get started on that dream project.
+              Let's get started on your dream project.
             </p>
           </Grid.Column>
         </Grid.Row>
