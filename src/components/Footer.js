@@ -68,6 +68,7 @@ class Footer extends React.Component {
                 </Grid.Column>
               </Grid.Row>
             </Grid>
+            <ServiceMap />
           </Container>
         </Segment>
       </StyleRoot>

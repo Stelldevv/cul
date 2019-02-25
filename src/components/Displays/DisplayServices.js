@@ -14,7 +14,8 @@ class DisplayServices extends Component {
           raised
           style={{
             backgroundColor: "#99b3ff",
-            marginTop: "4em"
+            marginTop: "4em",
+            borderRadius: "1em"
           }}
         >
           <Header
@@ -37,7 +38,8 @@ class DisplayServices extends Component {
         <Segment
           raised
           style={{
-            margin: "5em 1em"
+            margin: "5em 1em",
+            borderRadius: "1em"
           }}
         >
           <ItemGrid text={"Services Available"} />

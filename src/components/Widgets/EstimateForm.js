@@ -728,11 +728,12 @@ export default class EstimateForm extends Component {
           </h3>
           <Button
             primary
-            size="medium"
+            size="huge"
             animated="fade"
             style={{
               marginTop: "2em",
-              marginBottom: "4em"
+              marginBottom: "4em",
+              borderRadius: "0.4em"
             }}
             type="submit"
           >

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { StyleRoot } from "radium";
 
 import {
   Button,
@@ -45,41 +46,48 @@ class DesktopContainer extends Component {
     const { headerImage } = GenerateHeader(this.state.page);
 
     return (
-      <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-        <Visibility once={false}>
-          <div />
-          <Segment
-            inverted
-            textAlign="center"
-            style={{
-              minHeight: "700px",
-              padding: "0em 0em",
-              backgroundImage: "url(" + headerImage + ")",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center center",
-              WebkitBackgroundSize: "cover",
-              MozBackgroundSize: "cover",
-              OBackgroundSize: "cover",
-              backgroundSize: "cover"
-            }}
-            vertical
-          >
-            <Menu
-              fixed={fixed ? "top" : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
+      <StyleRoot>
+        <Responsive
+          getWidth={getWidth}
+          minWidth={Responsive.onlyTablet.minWidth}
+          style={{
+            backgroundColor: "#edf8f8"
+          }}
+        >
+          <Visibility once={false}>
+            <Segment
+              inverted
+              textAlign="center"
               style={{
-                backgroundColor: "#262626"
+                minHeight: "700px",
+                padding: "0em 0em",
+                backgroundImage: "url(" + headerImage + ")",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+                WebkitBackgroundSize: "cover",
+                MozBackgroundSize: "cover",
+                OBackgroundSize: "cover",
+                backgroundSize: "cover"
               }}
+              vertical
             >
-              <NavBar />
-            </Menu>
-            <PageRouting setPage={this.setPage} />
-          </Segment>
-        </Visibility>
-        {children}
-      </Responsive>
+              <Menu
+                fixed={fixed ? "top" : null}
+                inverted={!fixed}
+                pointing={!fixed}
+                secondary={!fixed}
+                style={{
+                  backgroundColor: "#262626"
+                }}
+              >
+                <NavBar />
+              </Menu>
+              <PageRouting setPage={this.setPage} />
+            </Segment>
+          </Visibility>
+          {children}
+        </Responsive>
+      </StyleRoot>
     );
   }
 }
@@ -100,90 +108,95 @@ class MobileContainer extends Component {
     const { sidebarOpened } = this.state;
     const { headerImageMobile } = GenerateHeader(this.state.page, "mobile");
     return (
-      <Responsive
-        as={Sidebar.Pushable}
-        getWidth={getWidth}
-        maxWidth={Responsive.onlyMobile.maxWidth}
-      >
-        <Sidebar
-          as={Menu}
-          animation="push"
-          inverted
-          onHide={this.handleSidebarHide}
-          vertical
-          visible={sidebarOpened}
+      <StyleRoot>
+        <Responsive
+          as={Sidebar.Pushable}
+          getWidth={getWidth}
+          maxWidth={Responsive.onlyMobile.maxWidth}
+          style={{
+            backgroundColor: "#edf8f8"
+          }}
         >
-          <Menu.Item active>
-            <Link to="/" onClick={this.handleSidebarHide}>
-              Home
-            </Link>
-          </Menu.Item>
-          <Menu.Item>
-            <Link to="/services" onClick={this.handleSidebarHide}>
-              Services
-            </Link>
-          </Menu.Item>
-          <Menu.Item>
-            <Link to="/about" onClick={this.handleSidebarHide}>
-              About
-            </Link>
-          </Menu.Item>
-          <Menu.Item>
-            <Link to="/contact" onClick={this.handleSidebarHide}>
-              Contact Us
-            </Link>
-          </Menu.Item>
-          <Menu.Item>
-            <Link to="/estimate" onClick={this.handleSidebarHide}>
-              Service Estimate
-            </Link>
-          </Menu.Item>
-        </Sidebar>
-
-        <Sidebar.Pusher dimmed={sidebarOpened}>
-          <Segment
+          <Sidebar
+            as={Menu}
+            animation="push"
             inverted
-            textAlign="center"
-            style={{
-              minHeight: "400px",
-              padding: "0em",
-              backgroundImage: "url(" + headerImageMobile + ")",
-              WebkitBackgroundSize: "cover",
-              MozBackgroundSize: "cover",
-              OBackgroundSize: "cover",
-              backgroundSize: "cover"
-            }}
+            onHide={this.handleSidebarHide}
             vertical
+            visible={sidebarOpened}
           >
-            <div
+            <Menu.Item active>
+              <Link to="/" onClick={this.handleSidebarHide}>
+                Home
+              </Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to="/services" onClick={this.handleSidebarHide}>
+                Services
+              </Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to="/about" onClick={this.handleSidebarHide}>
+                About
+              </Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to="/contact" onClick={this.handleSidebarHide}>
+                Contact Us
+              </Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to="/estimate" onClick={this.handleSidebarHide}>
+                Service Estimate
+              </Link>
+            </Menu.Item>
+          </Sidebar>
+
+          <Sidebar.Pusher dimmed={sidebarOpened}>
+            <Segment
+              inverted
+              textAlign="center"
               style={{
-                backgroundColor: "#262626",
-                margin: "0"
+                minHeight: "400px",
+                padding: "0em",
+                backgroundImage: "url(" + headerImageMobile + ")",
+                WebkitBackgroundSize: "cover",
+                MozBackgroundSize: "cover",
+                OBackgroundSize: "cover",
+                backgroundSize: "cover"
               }}
+              vertical
             >
-              <Menu inverted pointing secondary size="large">
-                <Menu.Item onClick={this.handleToggle}>
-                  <Icon name="sidebar" />
-                </Menu.Item>
-                <Menu.Item position="right">
-                  <Button inverted style={{ marginLeft: "0.5em" }}>
-                    <Link
-                      to="/estimate"
-                      style={{
-                        color: "white"
-                      }}
-                    >
-                      Free Estimate
-                    </Link>
-                  </Button>
-                </Menu.Item>
-              </Menu>
-            </div>
-            <PageRoutingMobile setPage={this.setPage} />
-          </Segment>
-          {children}
-        </Sidebar.Pusher>
-      </Responsive>
+              <div
+                style={{
+                  backgroundColor: "#262626",
+                  margin: "0"
+                }}
+              >
+                <Menu inverted pointing secondary size="large">
+                  <Menu.Item onClick={this.handleToggle}>
+                    <Icon name="sidebar" />
+                  </Menu.Item>
+                  <Menu.Item position="right">
+                    <Button inverted style={{ marginLeft: "0.5em" }}>
+                      <Link
+                        to="/estimate"
+                        style={{
+                          color: "white"
+                        }}
+                      >
+                        Free Estimate
+                      </Link>
+                    </Button>
+                  </Menu.Item>
+                </Menu>
+              </div>
+              <PageRoutingMobile setPage={this.setPage} />
+            </Segment>
+            {children}
+          </Sidebar.Pusher>
+        </Responsive>
+      </StyleRoot>
     );
   }
 }

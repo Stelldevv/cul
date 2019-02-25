@@ -5,7 +5,10 @@ import ReviewCarousel from "../Widgets/ReviewCarousel";
 
 const DisplayReviews = () => {
   return (
-    <Segment style={{ padding: "0em", marginBottom: "1em" }} vertical>
+    <Segment
+      style={{ padding: "0em", marginBottom: "1em", backgroundColor: "white" }}
+      vertical
+    >
       <Grid celled="internally" columns="equal" stackable>
         <Grid.Row textAlign="center">
           <Grid.Column

@@ -20,7 +20,11 @@ const DisplayAbout = () =>
     <Header
       as="h2"
       textAlign="center"
-      style={{ fontSize: "2.5em", margin: "2em 0em", color: "grey" }}
+      style={{
+        fontSize: "2.5em",
+        margin: "2em 0em",
+        textShadow: "2px 2px 6px grey"
+      }}
     >
       "In my 35 years of landscaping, I've learned something.."
     </Header>
@@ -108,7 +112,7 @@ const DisplayAbout = () =>
     <Segment
       style={{
         paddingBottom: "3em",
-        backgroundColor: "#ffffe6"
+        backgroundColor: "white"
       }}
     >
       <Grid>
